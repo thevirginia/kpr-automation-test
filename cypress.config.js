@@ -4,15 +4,17 @@ const webpack = require('@cypress/webpack-preprocessor');
 const {
     addCucumberPreprocessorPlugin
 } = require('@badeball/cypress-cucumber-preprocessor');
+require('dotenv').config();
 
 module.exports = defineConfig({
     env: {
+        URL_MINT: process.env.URL_MINT,
+        URL_LOGIN: process.env.URL_LOGIN,
         allure: true,
         allureReuseAfterSpec: true,
         stepDefinitions: `**/*-steps.js`
     },
     e2e: {
-        baseUrl: "https://d3px2o5g93r1fd.cloudfront.net/signIn",
         specPattern: "cypress/features/**/*.feature",
         setupNodeEvents: async function (on, config) {
             await addCucumberPreprocessorPlugin(on, config);

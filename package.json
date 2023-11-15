@@ -8,11 +8,13 @@
     "e2e:chrome": "cypress run --browser chrome",
     "e2e:firefox": "cypress run --browser firefox",
     "e2e:edge": "cypress run --browser edge",
-    "ui-regression-allure": "npx cypress run --spec cypress/features/login/**.feature --env allure=true --browser chrome",
+    "ui-regression-allure": "npx cypress run --spec cypress/features/**/**.feature --env allure=true --browser chrome",
     "allure:report": "allure generate allure-results --clean -o allure-report",
     "allure:clear": "rm -r allure-results/ allure-report cypress/screenshots || true",
     "allure:history": "mv -f allure-report/history allure-results/history && rm -r allure-report || true",
-    "allure:open": "allure open allure-report"
+    "allure:open": "allure open allure-report",
+    "cy:run:mint": "npx cypress run --spec cypress/features/mintPage/**.feature --env allure=true --browser chrome",
+    "cy:run:login": "npx cypress run --spec cypress/features/login/**.feature --env allure=true --browser chrome"
   },
   "author": "",
   "license": "ISC",
@@ -27,6 +29,7 @@
     "eslint-plugin-cypress": "2.13.3"
   },
   "dependencies": {
-    "cypress-failed-log": "^2.10.0"
+    "cypress-failed-log": "^2.10.0",
+    "dotenv": "^16.3.1"
   }
 }

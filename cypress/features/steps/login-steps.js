@@ -5,9 +5,10 @@ const loginPage = new LoginPage();
 const uuid = () => Cypress._.random(0, 1e6)
 const id = uuid()
 const testname = `testname${id}`
+const url = Cypress.env('URL_LOGIN')
 
 Given('A user opens a {string} website', (sitio) => {
-    cy.visit("/");
+    cy.visit(url + "/signIn");
 });
 
 When('A user enters the email {string}', (email) => {
