@@ -1,0 +1,9 @@
+{
+    "stepDefinitions": [
+        "**/*-steps.js"
+    ],
+    "html": {
+        "enabled": true
+    },
+    "nonGlobalStepDefinitions" : true
+}
