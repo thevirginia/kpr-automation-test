@@ -171,4 +171,4 @@ class DetailKeepers {
     }
 }
 
-module.exports = new DetailKeepers();
+export default new DetailKeepers();

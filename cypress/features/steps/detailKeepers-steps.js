@@ -66,9 +66,9 @@ Then('validate that the {string} is displayed', (text) => {
         case "POINTS COLLECTED":
             validateText(DetailKeepers.getPointsCollectedText(), 'POINTS COLLECTED');
             break;
-            case "Market":
-                validateText(DetailKeepers.getMarketText().last(), text);
-                break;
+        case "Market":
+            validateText(DetailKeepers.getMarketText().last(), text);
+            break;
         case "CITIZEN PROFILE":
         case "SETTINGS":
         case "SIGN OUT":

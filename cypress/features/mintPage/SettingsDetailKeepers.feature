@@ -30,7 +30,7 @@ Feature: Detail Keepers settings
             | NOTIFICATIONS      |
             | CRYPTO WALLET      |
 
-    @focus
+
     Scenario Outline: Validate DetailKeepers Settings anchors at the left
         Then validate that the "<Anchors>" is displayed
 
