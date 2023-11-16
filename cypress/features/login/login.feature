@@ -9,6 +9,7 @@ Feature: Login page
 
     Background:
         Given A user opens a "login" website
+        And A user clicks on the login to kprverse button
 
     @severity("critical")
     Scenario: Success Login
