@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cy:open": "npx cypress open --env allure=true  --browser chrome",
+    "cy:run": "npx cypress open --config video=false --env allure=true  --browser chrome",
     "e2e:chrome": "cypress run --browser chrome",
     "e2e:firefox": "cypress run --browser firefox",
     "e2e:edge": "cypress run --browser edge",

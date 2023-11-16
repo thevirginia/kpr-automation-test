@@ -135,8 +135,8 @@ Then('validate that the {string} is displayed', (text) => {
             validateText(DetailKeepers.getNotificationsText().last(), 'NOTIFICATIONS');
             break;
         case "CRYPTO WALLET":
-            DetailKeepers.getCryptoWalletText().eq(2).invoke('text').then((text) => {
-                expect(text).to.match(/^0x[0-9a-fA-F]+$/);
+            DetailKeepers.getCryptoWalletText().first().invoke('text').then((text) => {
+                expect(text).to.match(ethereumAddressRegExp);
             });
             break;
         case "BIO":

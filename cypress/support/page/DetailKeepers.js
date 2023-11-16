@@ -163,7 +163,7 @@ class DetailKeepers {
         return cy.get('p[class="styles_title__vF_9n"]');
     }
     getCryptoWalletText() {
-        return cy.get('div[class="styles_body__O8bvq"]');
+        return cy.get('div[style="width:100%"]>.styles_body__O8bvq> div > div  > span');
     }
 
     getLeftAnchors() {
