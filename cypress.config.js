@@ -4,15 +4,23 @@ const webpack = require('@cypress/webpack-preprocessor');
 const {
     addCucumberPreprocessorPlugin
 } = require('@badeball/cypress-cucumber-preprocessor');
+require('dotenv').config();
 
 module.exports = defineConfig({
+    failOnStatusCode: false,
+    chromeWebSecurity: false,
+    experimentalModifyObstructiveThirdPartyCode: true,
     env: {
+        URL_MINT: process.env.URL_MINT,
+        URL_LOGIN: process.env.URL_LOGIN,
         allure: true,
         allureReuseAfterSpec: true,
         stepDefinitions: `**/*-steps.js`
     },
     e2e: {
-        baseUrl: "https://d3px2o5g93r1fd.cloudfront.net/signIn",
+        failOnStatusCode: false,
+        chromeWebSecurity: false,
+        experimentalModifyObstructiveThirdPartyCode: true,
         specPattern: "cypress/features/**/*.feature",
         setupNodeEvents: async function (on, config) {
             await addCucumberPreprocessorPlugin(on, config);
@@ -42,5 +50,5 @@ module.exports = defineConfig({
         }
     },
     defaultCommandTimeout: 10000,
-    defaultpageLoadTimeout: 100000,
+    defaultpageLoadTimeout: 100000
 });
