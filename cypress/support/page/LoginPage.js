@@ -60,5 +60,8 @@ class LoginPage {
     verifyEmailTitle() {
         return cy.get('.popTitle.typewriter')
     }
+    loginToKprverseBtn() {
+        return cy.get('.interactive-cta.padding-small.is-fill-hidden.fill-width-mobile').first()
+    }
 }
 export default LoginPage;

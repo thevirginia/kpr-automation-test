@@ -5,9 +5,24 @@ const loginPage = new LoginPage();
 const uuid = () => Cypress._.random(0, 1e6)
 const id = uuid()
 const testname = `testname${id}`
+const urlLogin = Cypress.env('URL_LOGIN')
 
 Given('A user opens a {string} website', (sitio) => {
-    cy.visit("/");
+    cy.request({
+        failOnStatusCode: false,
+        url: 'https://:ramen23_kpr@kpr-boon-dev.web.app/',
+        headers: {
+            'Authorization': `Basic ${btoa(':ramen23_kpr')}`
+        }
+    }).then((resp) => {
+        // expect(resp.status).to.eq(200);
+        cy.visit('https://kpr-boon-dev.web.app', { failOnStatusCode: false, timeout: 130000 })
+    });
+    //cy.visit(urlLogin);
+});
+
+Given('A user clicks on the login to kprverse button', () => {
+    loginPage.loginToKprverseBtn().click({ timeout: 130000 });
 });
 
 When('A user enters the email {string}', (email) => {
