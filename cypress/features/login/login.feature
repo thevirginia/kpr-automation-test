@@ -65,6 +65,7 @@ Feature: Login page
         And A user clicks on the login button
         Then valid if the user has been able to register
 
+
     Scenario: home page texts
         Then valid that the text "Welcome back Keeper" is visible
         And valid that the text "Forgot Password?" is visible
@@ -80,6 +81,7 @@ Feature: Login page
         When A user clicks on the sign up button
         And A user clicks on the back button
         Then valid button on the home page
+
 
     Scenario: forgot Password modal
         When A user clicks on the forgot Password button

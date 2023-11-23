@@ -6,6 +6,7 @@ const uuid = () => Cypress._.random(0, 1e6)
 const id = uuid()
 const testname = `testname${id}`
 const urlLogin = Cypress.env('URL_LOGIN')
+const urlWidget = Cypress.env('URL_WIDGET')
 
 Given('A user opens a {string} website', (sitio) => {
     cy.request({
@@ -31,6 +32,14 @@ Given('A user enters the password in the home page', () => {
 
 Given('A user clicks on the submit button', () => {
     loginPage.submitButton().click();
+});
+
+Given('the user opens the website', () => {
+    cy.visit(urlWidget);
+});
+
+Given('A user clicks the Login button in the home page', () => {
+    loginPage.signInBtn().click();
 });
 
 When('A user enters the email {string}', (email) => {

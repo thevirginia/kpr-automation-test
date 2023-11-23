@@ -13,6 +13,8 @@ module.exports = defineConfig({
     env: {
         URL_MINT: process.env.URL_MINT,
         URL_LOGIN: process.env.URL_LOGIN,
+        URL_SETTING: process.env.URL_SETTING,
+        URL_WIDGET: process.env.URL_WIDGET,
         allure: true,
         allureReuseAfterSpec: true,
         stepDefinitions: `**/*-steps.js`
