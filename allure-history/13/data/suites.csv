@@ -1,4 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Fri Nov 24 20:52:36 GMT 2023","Fri Nov 24 20:53:09 GMT 2023","32658","Gherkin_parent_suite","Gherkin_suite","Gherkin_sub_suite","","","Incorrect email Login",""
-"failed","Fri Nov 24 20:52:23 GMT 2023","Fri Nov 24 20:52:36 GMT 2023","13529","Gherkin_parent_suite","Gherkin_suite","Gherkin_sub_suite","","","Success Login",""
-"passed","Fri Nov 24 20:53:09 GMT 2023","Fri Nov 24 20:53:33 GMT 2023","23884","Gherkin_parent_suite","Gherkin_suite","Gherkin_sub_suite","","","empty email field",""
