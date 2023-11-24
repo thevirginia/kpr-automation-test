@@ -6,23 +6,40 @@ const uuid = () => Cypress._.random(0, 1e6)
 const id = uuid()
 const testname = `testname${id}`
 const urlLogin = Cypress.env('URL_LOGIN')
+const urlWidget = Cypress.env('URL_WIDGET')
 
 Given('A user opens a {string} website', (sitio) => {
     cy.request({
         failOnStatusCode: false,
-        url: 'https://:ramen23_kpr@kpr-boon-dev.web.app/',
+        url: 'https://:ramen23_kpr@kpr-boon-dev.web.app',
         headers: {
             'Authorization': `Basic ${btoa(':ramen23_kpr')}`
         }
     }).then((resp) => {
         // expect(resp.status).to.eq(200);
-        cy.visit('https://kpr-boon-dev.web.app', { failOnStatusCode: false, timeout: 130000 })
+        cy.visit('https://kpr-boon-dev.web.app', { failOnStatusCode: false, timeout: 150000 })
     });
     //cy.visit(urlLogin);
 });
 
 Given('A user clicks on the login to kprverse button', () => {
-    loginPage.loginToKprverseBtn().click({ timeout: 130000 });
+    loginPage.loginToKprverseBtn().click({ timeout: 150000 });
+});
+
+Given('A user enters the password in the home page', () => {
+    loginPage.passwordFieldHome().type('ramen23_kpr');
+});
+
+Given('A user clicks on the submit button', () => {
+    loginPage.submitButton().click();
+});
+
+Given('the user opens the website', () => {
+    cy.visit(urlWidget);
+});
+
+Given('A user clicks the Login button in the home page', () => {
+    loginPage.signInBtn().click();
 });
 
 When('A user enters the email {string}', (email) => {

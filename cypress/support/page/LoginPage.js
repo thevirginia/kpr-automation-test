@@ -31,7 +31,7 @@ class LoginPage {
         return cy.get('.title.line.typewriter')
     }
     forgotPasswordText() {
-        return cy.get('.signIn_passwordContainer__ZXj3T').contains('Forgot Password?')
+        return cy.get('.signIn_passwordContainer__cl7p0').contains('Forgot Password?')
     }
     signWithSocialtext() {
         return cy.get('.or-text').contains('OR SIGN IN WITH SOCIALS')
@@ -52,7 +52,7 @@ class LoginPage {
         return cy.get('.popTitle.typewriter')
     }
     verifyEmailText() {
-        return cy.get('.signIn_labelBottom__Iqf_M.typewriter')
+        return cy.get('.signIn_labelBottom__-3fkI.typewriter')
     }
     sendCodeButton() {
         return cy.get('.primaryButton')
@@ -62,6 +62,15 @@ class LoginPage {
     }
     loginToKprverseBtn() {
         return cy.get('.interactive-cta.padding-small.is-fill-hidden.fill-width-mobile').first()
+    }
+    passwordFieldHome() {
+        return cy.get('.password')
+    }
+    submitButton() {
+        return cy.get('.submit')
+    }
+    signInBtn(){
+        return cy.get('#widget-login-btn')
     }
 }
 export default LoginPage;
