@@ -20,9 +20,11 @@ jobs:
 
     - name: Run Cypress Tests
       run: npm run cy:run:login || true
-
+    
     - name: Generate Allure Report
-      run: npm run allure:report
+      run: |
+        npm run allure:report
+        npm run allure:history2
 
     - name: Publish Allure Report to GitHub Pages
       uses: simple-elf/allure-report-action@v1
