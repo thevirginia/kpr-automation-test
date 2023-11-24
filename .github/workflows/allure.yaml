@@ -7,54 +7,39 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Checkout de la rama actual
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    # Setup de Node.js
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
         node-version: 18
 
-    # Instalación de dependencias
     - name: Install Dependencies
       run: npm install
 
-    # Ejecución de pruebas de Cypress
     - name: Run Cypress Tests
       run: npm run cy:run:login || true
     
-    # Generación del informe de Allure
     - name: Generate Allure Report
       run: npm run allure:report
 
-    # Actualización del historial de Allure
     - name: Update Allure History
       run: npm run allure:history2
 
-    # Publicación del informe en GitHub Pages
-    - name: Publish Allure Report to GitHub Pages
-      uses: simple-elf/allure-report-action@v1
-      with:
-        allure_results: allure-results
-        allure_report: allure-report
-        gh_pages: true
-
-    # Checkout de la rama gh-pages
-    - name: Checkout gh-pages branch
+    - name: Checkout gh-pages branch in a different directory
       uses: actions/checkout@v2
       with:
         ref: 'gh-pages'
+        path: 'gh-pages'
 
-    # Copiar allure-history a la rama gh-pages
-    - name: Copy Allure History to gh-pages
+    - name: Copy Allure History to the gh-pages branch
       run: |
-        cp -r allure-history/ ${{ github.workspace }}/
+        cp -r allure-history/* gh-pages/allure-history/
 
-    # Commit y Push a la rama gh-pages
     - name: Commit and Push Changes to gh-pages
       run: |
+        cd gh-pages
         git config --global user.name 'GastonAGenaud'
         git config --global user.email 'gastongenaudar@gmail.com'
         git add allure-history/
