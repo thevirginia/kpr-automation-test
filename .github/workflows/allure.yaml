@@ -41,3 +41,5 @@ jobs:
         git add allure-history
         git commit -m "Update Allure Report History"
         git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
