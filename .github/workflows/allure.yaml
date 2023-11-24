@@ -7,26 +7,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    # Checkout de la rama actual
     - name: Checkout Repository
       uses: actions/checkout@v2
 
+    # Setup de Node.js
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
         node-version: 18
 
+    # Instalación de dependencias
     - name: Install Dependencies
       run: npm install
 
+    # Ejecución de pruebas de Cypress
     - name: Run Cypress Tests
       run: npm run cy:run:login || true
     
+    # Generación del informe de Allure
     - name: Generate Allure Report
       run: npm run allure:report
 
+    # Actualización del historial de Allure
     - name: Update Allure History
       run: npm run allure:history2
 
+    # Publicación del informe en GitHub Pages
     - name: Publish Allure Report to GitHub Pages
       uses: simple-elf/allure-report-action@v1
       with:
@@ -34,12 +41,22 @@ jobs:
         allure_report: allure-report
         gh_pages: true
 
-    - name: Commit and Push Changes
+    # Checkout de la rama gh-pages
+    - name: Checkout gh-pages branch
+      uses: actions/checkout@v2
+      with:
+        ref: 'gh-pages'
+
+    # Copiar allure-history a la rama gh-pages
+    - name: Copy Allure History to gh-pages
+      run: |
+        cp -r allure-history/ ${{ github.workspace }}/
+
+    # Commit y Push a la rama gh-pages
+    - name: Commit and Push Changes to gh-pages
       run: |
         git config --global user.name 'GastonAGenaud'
         git config --global user.email 'gastongenaudar@gmail.com'
-        git fetch
-        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/thevirginia/kpr-automation-test.git
-        git add .
-        git commit -m "Actualizar informes"
-        git push
+        git add allure-history/
+        git commit -m "Actualizar informes de Allure"
+        git push origin gh-pages
