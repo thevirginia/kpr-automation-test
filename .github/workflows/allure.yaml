@@ -43,6 +43,6 @@ jobs:
         cd gh-pages
         git config --global user.name 'GastonAGenaud'
         git config --global user.email 'gastongenaudar@gmail.com'
-        git add allure-history/
+        git add .
         git commit -m "Actualizar informes de Allure"
         git push origin gh-pages
