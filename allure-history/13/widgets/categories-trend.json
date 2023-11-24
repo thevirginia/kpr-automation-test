@@ -1,0 +1,12 @@
+[ {
+  "buildOrder" : 13,
+  "reportUrl" : "https://thevirginia.github.io/kpr-automation-test/13",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "Product defects" : 1
+  }
+}, {
+  "data" : {
+    "Product defects" : 1
+  }
+} ]

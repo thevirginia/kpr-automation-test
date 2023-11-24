@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://thevirginia.github.io/kpr-automation-test",
+  "buildOrder" : 13,
+  "buildName" : "GitHub Actions Run #6983975693",
+  "buildUrl" : "https://github.com/thevirginia/kpr-automation-test/actions/runs/6983975693",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://thevirginia.github.io/kpr-automation-test/13"
+} ]
