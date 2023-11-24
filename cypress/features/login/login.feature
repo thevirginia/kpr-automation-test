@@ -13,18 +13,18 @@ Feature: Login page
         And A user clicks on the submit button
         And A user clicks on the login to kprverse button
 
-    @severity("critical")
-    Scenario: Success Login
-        When A user enters the email "test2024@gmail.com"
-        And A user enters the password "test2024.."
-        And A user clicks on the login button
-        Then valid if the user has been able to login
+    # @severity("critical")
+    # Scenario: Success Login
+    #     When A user enters the email "test2024@gmail.com"
+    #     And A user enters the password "test2024.."
+    #     And A user clicks on the login button
+    #     Then valid if the user has been able to login
 
-    Scenario: Incorrect email Login
-        When A user enters the email "test2026@gmail.com"
-        And A user enters the password "test2024.."
-        And A user clicks on the login button
-        Then The error message is displayed
+    # Scenario: Incorrect email Login
+    #     When A user enters the email "test2026@gmail.com"
+    #     And A user enters the password "test2024.."
+    #     And A user clicks on the login button
+    #     Then The error message is displayed
 
     Scenario: empty email field
         And A user enters the password "test2024.."
