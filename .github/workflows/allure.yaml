@@ -28,5 +28,5 @@ jobs:
       uses: simple-elf/allure-report-action@v1
       with:
         allure_results: allure-results
-        gh_pages_branch: gh-pages
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        allure_report: allure-report
+        gh_pages: true # Si quieres publicar en GitHub Pages
