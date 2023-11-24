@@ -1,8 +1,9 @@
 name: allure-report
 'on':
+    workflow_dispatch:
     push:
-        branches:
-            - master
+        tags:
+        - v.*-execution
 jobs:
     generate-report:
         runs-on: ubuntu-16.04
