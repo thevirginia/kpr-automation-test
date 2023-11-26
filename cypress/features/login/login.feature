@@ -1,8 +1,5 @@
-@parentSuite("Gherkin_parent_suite")
-@suite("Gherkin_suite")
-@subSuite("Gherkin_sub_suite")
-@epic("Behaviours_epic")
-@story("Behaviours_story")
+@suite("KPR")
+@story("Login")
 Feature: Login page
 
     Feature Login page will work depending on the user credentials
