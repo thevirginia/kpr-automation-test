@@ -69,8 +69,14 @@ class LoginPage {
     submitButton() {
         return cy.get('.submit')
     }
-    signInBtn(){
+    signInBtn() {
         return cy.get('#widget-login-btn')
+    }
+    signInHomeBtn() {
+        return cy.get('.styles_buttonDefault__usd_6')
+    }
+    settingsTitle() {
+        return cy.get('.jsx-10766fb532205367.Login_loginTitle__iWqKZ')
     }
 }
 export default LoginPage;
