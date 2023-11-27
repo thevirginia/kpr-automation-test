@@ -3,8 +3,10 @@ name: Cypress Tests with Allure Report
 on:
   workflow_dispatch:
   push:
-    tags:
-    - v.*-dev
+    branches:
+      - main
+      - development
+      - dangelo
 
 jobs:
   test:
