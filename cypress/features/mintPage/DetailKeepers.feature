@@ -1,3 +1,5 @@
+@suite("KPR")
+@story("DetailKeepers")
 Feature: Detail Keepers
 
     Background:

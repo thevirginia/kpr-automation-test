@@ -1,3 +1,5 @@
+@suite("KPR")
+@story("Login")
 Feature: Detail Keepers settings
 
     Background:

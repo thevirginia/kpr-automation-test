@@ -1,3 +1,5 @@
+@suite("KPR")
+@story("MintPage")
 Feature:Chibi
 
     Background:
