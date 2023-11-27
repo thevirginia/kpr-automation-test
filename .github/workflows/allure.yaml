@@ -1,6 +1,10 @@
 name: Cypress Tests with Allure Report
 
-on: [push]
+on:
+  workflow_dispatch:
+  push:
+    tags:
+    - v.*-dev
 
 jobs:
   test:
