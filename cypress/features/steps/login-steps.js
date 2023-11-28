@@ -5,7 +5,7 @@ const loginPage = new LoginPage();
 const uuid = () => Cypress._.random(0, 1e6)
 const id = uuid()
 const testname = `testname${id}`
-const urlLogin = Cypress.env('URL_LOGIN')
+const urlSettings = Cypress.env('URL_SETTINGS')
 const urlWidget = Cypress.env('URL_WIDGET')
 
 Given('A user opens a {string} website', (sitio) => {
@@ -40,6 +40,14 @@ Given('the user opens the website', () => {
 
 Given('A user clicks the Login button in the home page', () => {
     loginPage.signInBtn().click();
+});
+
+Given('the user Sign into the settings page', () => {
+    cy.visit(urlSettings);
+});
+
+Given('A user clicks the Sign in button in the home page', () => {
+    loginPage.signInHomeBtn().click();
 });
 
 When('A user enters the email {string}', (email) => {
@@ -96,11 +104,15 @@ When('valid that the text {string} is visible', (text) => {
 });
 
 When('A user clicks on the {string} button', () => {
-    loginPage.closeButton().click();
+    loginPage.closeButton().click({force:true});
+});
+
+Then('valid that the user returned to the home page', () => {
+    loginPage.settingsTitle().should('be.visible');
 });
 
 When('A user clicks on the back button', () => {
-    loginPage.backButton().click();
+    loginPage.backButton().click({force:true});
 });
 
 Then('valid button on the home page', () => {
