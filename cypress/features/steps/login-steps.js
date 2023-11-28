@@ -43,12 +43,17 @@ Given('A user clicks the Login button in the home page', () => {
 });
 
 Given('the user Sign into the settings page', () => {
+    cy.intercept('**/main.bundle.css').as('bundle.css')
     cy.visit(urlSettings);
 });
 
 Given('A user clicks the Sign in button in the home page', () => {
-    loginPage.signInHomeBtn().click();
+    cy.wait('@bundle.css').then(() => {
+        cy.wait(300)
+        loginPage.signInHomeBtn().should('be.enabled').click();
+    })
 });
+
 
 When('A user enters the email {string}', (email) => {
     loginPage.emailField().type(email);
@@ -104,7 +109,7 @@ When('valid that the text {string} is visible', (text) => {
 });
 
 When('A user clicks on the {string} button', () => {
-    loginPage.closeButton().click({force:true});
+    loginPage.closeButton().click({ force: true });
 });
 
 Then('valid that the user returned to the home page', () => {
@@ -112,7 +117,7 @@ Then('valid that the user returned to the home page', () => {
 });
 
 When('A user clicks on the back button', () => {
-    loginPage.backButton().click({force:true});
+    loginPage.backButton().click({ force: true });
 });
 
 Then('valid button on the home page', () => {
