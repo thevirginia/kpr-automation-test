@@ -10,6 +10,7 @@ module.exports = defineConfig({
     failOnStatusCode: false,
     chromeWebSecurity: false,
     experimentalModifyObstructiveThirdPartyCode: true,
+    // numTestsKeptInMemory: 0,
     env: {
         URL_MINT: process.env.URL_MINT,
         URL_LOGIN: process.env.URL_LOGIN,
@@ -18,7 +19,7 @@ module.exports = defineConfig({
         URL_MINTPAGE: process.env.URL_MINTPAGE,
         allure: true,
         allureReuseAfterSpec: true,
-        stepDefinitions: `**/*-steps.js`
+        stepDefinitions: `**/*-steps.js`,
     },
     e2e: {
         failOnStatusCode: false,

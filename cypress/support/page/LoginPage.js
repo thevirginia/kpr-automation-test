@@ -73,10 +73,14 @@ class LoginPage {
         return cy.get('#widget-login-btn')
     }
     signInHomeBtn() {
-        return cy.get('.styles_buttonDefault__usd_6')
+        return cy.get('button[class="styles_buttonDefault__usd_6"]')
     }
     settingsTitle() {
         return cy.get('.jsx-10766fb532205367.Login_loginTitle__iWqKZ')
+    }
+
+    settingsTitle2(){
+        return cy.get('h2[class="jsx-484c5d75a9787ce1 Login_loginTitle__iWqKZ"]')
     }
 }
 export default LoginPage;
