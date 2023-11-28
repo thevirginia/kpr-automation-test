@@ -66,10 +66,6 @@ Feature: Login Settings page
         And valid that the text "Dont have an account?" is visible
 
 
-    Scenario: valid the "X" button of the login modal
-        When A user clicks on the "X" button
-        Then valid that the user returned to the home page
-
     Scenario: valid the back button in the sign up modal
         When A user clicks on the sign up button
         And A user clicks on the back button

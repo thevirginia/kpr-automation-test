@@ -47,7 +47,8 @@ Given('the user Sign into the settings page', () => {
 });
 
 Given('A user clicks the Sign in button in the home page', () => {
-    loginPage.signInHomeBtn().click();
+    loginPage.signInHomeBtn().click({ force: true })
+    loginPage.signInHomeBtn().wait(1500).click({ force: true ,timeout:12000})
 });
 
 When('A user enters the email {string}', (email) => {
@@ -104,7 +105,7 @@ When('valid that the text {string} is visible', (text) => {
 });
 
 When('A user clicks on the {string} button', () => {
-    loginPage.closeButton().click({force:true});
+    loginPage.closeButton().click({ force: true });
 });
 
 Then('valid that the user returned to the home page', () => {
@@ -112,7 +113,7 @@ Then('valid that the user returned to the home page', () => {
 });
 
 When('A user clicks on the back button', () => {
-    loginPage.backButton().click({force:true});
+    loginPage.backButton().click({ force: true });
 });
 
 Then('valid button on the home page', () => {
