@@ -7,19 +7,34 @@ const id = uuid()
 const testname = `testname${id}`
 const urlSettings = Cypress.env('URL_SETTINGS')
 const urlWidget = Cypress.env('URL_WIDGET')
+const urlSettingsStag = Cypress.env('URL_SETTINGS_STAGING')
+const urlKprStaging = Cypress.env('URL_LOGIN_KPR_STG')
 
-Given('A user opens a {string} website', (sitio) => {
-    cy.request({
-        failOnStatusCode: false,
-        url: 'https://:ramen23_kpr@kpr-boon-dev.web.app',
-        headers: {
-            'Authorization': `Basic ${btoa(':ramen23_kpr')}`
-        }
-    }).then((resp) => {
-        // expect(resp.status).to.eq(200);
-        cy.visit('https://kpr-boon-dev.web.app', { failOnStatusCode: false, timeout: 150000 })
-    });
-    //cy.visit(urlLogin);
+Given('A user opens a login website in {string}', (env) => {
+    if (env === 'staging') {
+        cy.request({
+            failOnStatusCode: false,
+            url: 'https://:ramen23_kpr@kpr-boon-stg.web.app',
+            headers: {
+                'Authorization': `Basic ${btoa(':ramen23_kpr')}`
+            }
+        }).then((resp) => {
+            // expect(resp.status).to.eq(200);
+            cy.visit('https://kpr-boon-stg.web.app', { failOnStatusCode: false, timeout: 150000 })
+        });
+    } else if (env === 'dev') {
+        cy.request({
+            failOnStatusCode: false,
+            url: 'https://:ramen23_kpr@kpr-boon-dev.web.app',
+            headers: {
+                'Authorization': `Basic ${btoa(':ramen23_kpr')}`
+            }
+        }).then((resp) => {
+            // expect(resp.status).to.eq(200);
+            cy.visit('https://kpr-boon-dev.web.app', { failOnStatusCode: false, timeout: 150000 })
+        });
+    }
+
 });
 
 Given('A user clicks on the login to kprverse button', () => {
@@ -42,16 +57,18 @@ Given('A user clicks the Login button in the home page', () => {
     loginPage.signInBtn().click();
 });
 
-Given('the user Sign into the settings page', () => {
-    cy.intercept('**/main.bundle.css').as('bundle.css')
-    cy.visit(urlSettings);
+Given('the user Sign into the settings page in {string}', (env) => {
+    if (env === 'staging') {
+        cy.visit(urlSettingsStag);
+    } else if (env === 'develop') {
+        cy.visit(urlSettings);
+    }
 });
 
 Given('A user clicks the Sign in button in the home page', () => {
-    cy.wait('@bundle.css').then(() => {
-        cy.wait(300)
-        loginPage.signInHomeBtn().should('be.enabled').click();
-    })
+    loginPage.signInHomeBtn().should('be.visible').click({ force: true });
+    cy.wait(1000)
+    loginPage.signInHomeBtn().should('be.enabled').click({ force: true });
 });
 
 
@@ -118,7 +135,6 @@ Then('valid that the user returned to the home page', () => {
 });
 
 When('A user clicks on the back button', () => {
-    loginPage.backButton().click({ force: true });
     loginPage.backButton().click({ force: true });
 });
 
