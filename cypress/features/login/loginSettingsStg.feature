@@ -1,3 +1,5 @@
+@suite("KPR")
+@story("Login")
 Feature: Login Settings Stg page
 
     Feature Login page will work depending on the user credentials
