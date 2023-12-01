@@ -15,8 +15,8 @@
     "allure:history": "mv -f allure-report/history allure-results/history && rm -r allure-report || true",
     "allure:history2": "mv -f allure-report/history allure-history || true",
     "allure:open": "allure open allure-report",
-    "cy:run:mint": "npx cypress run --spec cypress/features/mintPage/**.feature --env allure=true --browser chrome",
-    "cy:run:login": "npx cypress run --spec cypress/features/login/**.feature --env allure=true --browser chrome"
+    "cy:run:dev": "cross-env NODE_ENV=develop cypress run --env allure=true",
+    "cy:run:stg": "cross-env NODE_ENV=staging cypress run --env allure=true"
   },
   "author": "",
   "license": "ISC",
@@ -31,6 +31,7 @@
     "eslint-plugin-cypress": "2.13.3"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "cypress-failed-log": "^2.10.0",
     "dotenv": "^16.3.1"
   }

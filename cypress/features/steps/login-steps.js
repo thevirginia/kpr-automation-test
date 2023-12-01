@@ -7,8 +7,8 @@ const id = uuid()
 const testname = `testname${id}`
 const urlSettings = Cypress.env('URL_SETTINGS')
 const urlWidget = Cypress.env('URL_WIDGET')
-const urlSettingsStag = Cypress.env('URL_SETTINGS_STAGING')
-const urlKprStaging = Cypress.env('URL_LOGIN_KPR_STG')
+const urlSettingsStag = Cypress.env('URL_SETTINGS')
+const urlKprStaging = Cypress.env('URL_LOGIN_KPR')
 
 Given('A user opens a login website in {string}', (env) => {
     if (env === 'staging') {

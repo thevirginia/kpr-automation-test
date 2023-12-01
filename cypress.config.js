@@ -4,7 +4,7 @@ const webpack = require('@cypress/webpack-preprocessor');
 const {
     addCucumberPreprocessorPlugin
 } = require('@badeball/cypress-cucumber-preprocessor');
-require('dotenv').config();
+const dotenv = require('dotenv');
 
 module.exports = defineConfig({
     failOnStatusCode: false,
@@ -12,14 +12,12 @@ module.exports = defineConfig({
     experimentalModifyObstructiveThirdPartyCode: true,
     // numTestsKeptInMemory: 0,
     env: {
+        NODE_ENV: process.env.NODE_ENV,
         URL_MINT: process.env.URL_MINT,
-        URL_LOGIN: process.env.URL_LOGIN,
+        URL_LOGIN_KPR: process.env.URL_LOGIN_KPR,
         URL_WIDGET: process.env.URL_WIDGET,
-        URL_SETTINGS: process.env.URL_SETTINGS,
         URL_MINTPAGE: process.env.URL_MINTPAGE,
-        URL_SETTINGS_STAGING: process.env.URL_SETTINGS_STAGING,
-        URL_MINTPAGE_STAGING: process.env.URL_MINTPAGE_STAGING,
-        URL_LOGIN_KPR_STG:process.env.URL_LOGIN_KPR_STG,
+        URL_SETTINGS: process.env.URL_SETTINGS,
         allure: true,
         allureReuseAfterSpec: true,
         stepDefinitions: `**/*-steps.js`,
@@ -30,6 +28,13 @@ module.exports = defineConfig({
         experimentalModifyObstructiveThirdPartyCode: true,
         specPattern: "cypress/features/**/*.feature",
         setupNodeEvents: async function (on, config) {
+            const envFile = `.env.${config.env.NODE_ENV || 'develop'}`
+            dotenv.config({ path: envFile })
+            config.env={
+                ...config.env,
+                ...process.env
+            }
+            console.log(`Running in environment: .env.${config.env.NODE_ENV || 'ENVIRONMENT NOT FOUND'}`)
             await addCucumberPreprocessorPlugin(on, config);
             on(
                 'file:preprocessor',

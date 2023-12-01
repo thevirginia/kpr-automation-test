@@ -1,7 +1,7 @@
 import { Given, Then, When } from "@badeball/cypress-cucumber-preprocessor";
 const url = Cypress.env('URL_MINT')
 const urlMintPage = Cypress.env('URL_MINTPAGE')
-const urlMintStagPage =Cypress.env('URL_MINTPAGE_STAGING')
+const urlMintStagPage =Cypress.env('URL_MINTPAGE')
 
 Given("A user opens MintPage", () => {
   cy.visit(url + '/MintPage')
