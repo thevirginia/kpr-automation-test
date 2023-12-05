@@ -61,7 +61,7 @@ class LoginPage {
         return cy.get('.popTitle.typewriter')
     }
     loginToKprverseBtn() {
-        return cy.get('.interactive-cta.padding-small.is-fill-hidden.fill-width-mobile').first()
+        return cy.get('.interactive-cta.padding-small.is-fill-hidden.fill-width-mobile').last()
     }
     passwordFieldHome() {
         return cy.get('.password')
