@@ -22,7 +22,7 @@ Given('A user opens a login website in {string}', (env) => {
             // expect(resp.status).to.eq(200);
             cy.visit('https://kpr-boon-stg.web.app', { failOnStatusCode: false, timeout: 150000 })
         });
-    } else if (env === 'dev') {
+    } else if (env === 'develop') {
         cy.request({
             failOnStatusCode: false,
             url: 'https://:ramen23_kpr@kpr-boon-dev.web.app',
@@ -38,7 +38,7 @@ Given('A user opens a login website in {string}', (env) => {
 });
 
 Given('A user clicks on the login to kprverse button', () => {
-    loginPage.loginToKprverseBtn().click({ timeout: 150000 });
+    loginPage.loginToKprverseBtn().click({ force: true, timeout: 150000 });
 });
 
 Given('A user enters the password in the home page', () => {

@@ -5,7 +5,7 @@ Feature: Login KPR Stg
     Feature Login page will work depending on the user credentials
 
     Background:
-        Given A user opens a login website in "staging"
+        Given A user opens a login website in "develop"
         And A user enters the password in the home page
         And A user clicks on the submit button
         And A user clicks on the login to kprverse button
