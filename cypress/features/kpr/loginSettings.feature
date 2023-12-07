@@ -1,6 +1,6 @@
-@feature("Login_Settings_Stg")
-@story("Login_Settings_Stg")
-Feature: Login Settings Stg
+@feature("Login_Settings")
+@story("Login_Settings")
+Feature: Login Settings
 
     Feature Login page will work depending on the user credentials
 

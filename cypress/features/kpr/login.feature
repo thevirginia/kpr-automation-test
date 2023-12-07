@@ -1,6 +1,6 @@
-@feature("Login_KPR_Stg")
-@story("Login_KPR_Stg")
-Feature: Login KPR Stg
+@feature("Login")
+@story("Login")
+Feature: Login
 
     Feature Login page will work depending on the user credentials
 

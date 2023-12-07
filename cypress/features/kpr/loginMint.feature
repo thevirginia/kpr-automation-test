@@ -1,6 +1,6 @@
-@feature("Login_Stg")
-@story("Login_Stg")
-Feature: Login Stg
+@feature("Login_Mint")
+@story("Login_Mint")
+Feature: Login Mint
 
     Feature Login page will work depending on the user credentials
 

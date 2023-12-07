@@ -36,6 +36,12 @@ module.exports = defineConfig({
             }
             console.log(`Running in environment: .env.${config.env.NODE_ENV || 'ENVIRONMENT NOT FOUND'}`)
             await addCucumberPreprocessorPlugin(on, config);
+            on('before:browser:launch', (browser = {}, launchOptions) => {
+                if (browser.family === 'chromium' && browser.name !== 'electron') {
+                  launchOptions.args.push('--mute-audio');
+                  return launchOptions;
+                }
+              });
             on(
                 'file:preprocessor',
                 webpack({
