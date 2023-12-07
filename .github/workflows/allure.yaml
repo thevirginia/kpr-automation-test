@@ -45,6 +45,7 @@ jobs:
     - name: Copy Allure History to the gh-pages branch
       run: |
         #mkdir gh-pages
+        cp -r allure-report/* gh-pages
         cp -r allure-history/* gh-pages
 
     - name: Commit and Push Changes to gh-pages
