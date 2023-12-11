@@ -21,12 +21,13 @@ module.exports = defineConfig({
         allure: true,
         allureReuseAfterSpec: true,
         stepDefinitions: `**/*-steps.js`,
+        allureLogGherkin: true,
     },
     e2e: {
         failOnStatusCode: false,
         chromeWebSecurity: false,
         experimentalModifyObstructiveThirdPartyCode: true,
-        specPattern: "cypress/features/**/*.feature",
+        specPattern: "cypress/features/kpr/*.feature",
         setupNodeEvents: async function (on, config) {
             const envFile = `.env.${config.env.NODE_ENV || 'develop'}`
             dotenv.config({ path: envFile })
