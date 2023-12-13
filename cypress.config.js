@@ -27,7 +27,7 @@ module.exports = defineConfig({
         failOnStatusCode: false,
         chromeWebSecurity: false,
         experimentalModifyObstructiveThirdPartyCode: true,
-        specPattern: "cypress/features/kpr/*.feature",
+        specPattern: "cypress/features/",
         setupNodeEvents: async function (on, config) {
             const envFile = `.env.${config.env.NODE_ENV || 'develop'}`
             dotenv.config({ path: envFile })
