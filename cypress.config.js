@@ -11,8 +11,7 @@ module.exports = defineConfig({
     chromeWebSecurity: false,
     experimentalModifyObstructiveThirdPartyCode: true,
     env: {
-        URL_MINT: process.env.URL_MINT,
-        URL_LOGIN: process.env.URL_LOGIN,
+        URL: process.env.URL,
         allure: true,
         allureReuseAfterSpec: true,
         stepDefinitions: `**/*-steps.js`
