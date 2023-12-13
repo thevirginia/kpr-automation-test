@@ -71,6 +71,10 @@ Given('A user clicks the Sign in button in the home page', () => {
     loginPage.signInHomeBtn().should('be.enabled').click({ force: true });
 });
 
+Given('I change the resolution to {string}',(resolution)=>{
+    cy.viewport(resolution)
+})
+
 
 When('A user enters the email {string}', (email) => {
     loginPage.emailField().type(email);
