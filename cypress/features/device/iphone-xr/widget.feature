@@ -6,6 +6,7 @@ Feature: Widget
 
     Background:
         Given the user opens the website
+        And I change the resolution to "iphone-xr"
         And A user clicks the Login button in the home page
 
     @severity("critical")

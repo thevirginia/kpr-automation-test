@@ -4,6 +4,7 @@ Feature: Detail Keepers settings
 
     Background:
         Given A user opens Detail Keepers Settings
+        And I change the resolution to "iphone-xr"
 
     Scenario Outline: Validate DetailKeepers Settings
         Then validate that the "<Text>" is displayed

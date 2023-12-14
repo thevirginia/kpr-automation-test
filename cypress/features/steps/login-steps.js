@@ -71,8 +71,15 @@ Given('A user clicks the Sign in button in the home page', () => {
     loginPage.signInHomeBtn().should('be.enabled').click({ force: true });
 });
 
-Given('I change the resolution to {string}',(resolution)=>{
-    cy.viewport(resolution)
+Given('I change the resolution to {string}', (resolution) => {
+    if (resolution === 'iphone-8') {
+        cy.viewport(resolution)
+    } else if (resolution === 'iphone-xr') {
+        cy.viewport(resolution)
+    }
+    else if (resolution === 'macbook-15') {
+        cy.viewport(resolution)
+    }
 })
 
 

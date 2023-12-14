@@ -6,6 +6,7 @@ Feature: Login Mint
 
     Background:
         Given A user opens a Mint Page in "staging"
+        And I change the resolution to "iphone-8"
 
     @severity("critical")
     Scenario: Success Login in Mint page

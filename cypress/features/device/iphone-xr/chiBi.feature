@@ -4,6 +4,7 @@ Feature:Chibi
 
     Background:
         Given A user opens MintPage
+        And I change the resolution to "iphone-xr"
 
     Scenario: Buying Chi-Bi with Ethereum
         When user clicks one amount

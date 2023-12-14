@@ -6,6 +6,7 @@ Feature: Login
 
     Background:
         Given A user opens a login website in "develop"
+        And I change the resolution to "iphone-8"
         And A user enters the password in the home page
         And A user clicks on the submit button
         And A user clicks on the login to kprverse button

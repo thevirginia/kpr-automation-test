@@ -6,6 +6,7 @@ Feature: Login Settings
 
     Background:
         Given the user Sign into the settings page in "staging"
+        And I change the resolution to "iphone-xr"
         And A user clicks the Sign in button in the home page
 
     @severity("critical")

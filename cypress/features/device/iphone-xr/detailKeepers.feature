@@ -4,6 +4,7 @@ Feature: Detail Keepers
 
     Background:
         Given A user opens DetailKeepers
+        And I change the resolution to "iphone-xr"
 
 
     Scenario Outline: Validate DetailKeepers page - <Text>
