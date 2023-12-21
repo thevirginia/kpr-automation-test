@@ -2,7 +2,7 @@ import { Given, Then, When } from "@badeball/cypress-cucumber-preprocessor";
 import BuyChibi from "../../support/page/BuyChibi";
 
 const clickElement = (element) => {
-  element.should('be.visible').click({ force: true });
+  element.should('be.visible').click({ force: true, timeout: 1500 });
 };
 
 const validateText = (element, expectedText) => {

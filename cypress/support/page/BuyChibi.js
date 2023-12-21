@@ -1,6 +1,6 @@
 class BuyChibi {
     getOneBuyChibi() {
-        return cy.get('input[class="itemAmount_checkbox__m9Qvo"]');
+        return cy.get('input[class=".itemAmount_checkbox__m9Qvo"]');
     }
 
     getCheckoutButton() {
