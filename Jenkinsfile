@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { docker 'cypress/base:latest' }
 
     stages {
         stage('instalar dependencias') {
