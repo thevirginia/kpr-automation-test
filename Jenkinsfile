@@ -19,7 +19,7 @@ pipeline {
 
             steps {
 
-                git branch: 'dangelo', url: git@github.com:thevirginia/kpr-automation-test.git'
+                git branch: 'dangelo', url: 'git@github.com:thevirginia/kpr-automation-test.git'
 
             }
 
