@@ -1,13 +1,13 @@
 pipeline {
     agent any
 
-    tools{nodejs"nodejs"}
+    tools{ nodejs "nodejs" }
 
     stages {
         stage('instalar dependencias') {
             steps {
                 script {
-                    sh 'npm i'
+                    sh 'npm ci'
                   
                 }
             }
