@@ -16,7 +16,7 @@ pipeline {
             steps{
                 script{
                     try{
-                        sh 'npx cypress run --spec cypress/features/kpr/widget.feature --env allure=true --browser chrome'
+                        sh 'npx cypress run --spec cypress/features/kpr/widget.feature --env allure=true --browser chrome -Dorg.jenkinsci.plugins.durabletask.BourneShellScript.LAUNCH_DIAGNOSTICS=true'
                     }catch (Exception e){
                         echo "Error during test execution"
                     }
