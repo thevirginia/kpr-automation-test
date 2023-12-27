@@ -1,7 +1,9 @@
 pipeline {
 
  agent {
-  dockerContainer 'node:16'
+  tools{
+    nodejs 'node16'
+  }
 }
 
 
