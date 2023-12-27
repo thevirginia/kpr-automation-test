@@ -2,7 +2,7 @@ pipeline {
 
  agent {
   tools{
-    nodejs 'node16'
+    nodejs 'Node.js 16'
   }
 }
 
