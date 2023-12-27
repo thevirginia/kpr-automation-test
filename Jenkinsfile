@@ -1,10 +1,7 @@
 pipeline {
 
- agent {
-  tools{
-    nodejs 'Node.js 16'
-  }
-}
+ agent any
+
 
 
     stages {
@@ -22,6 +19,9 @@ pipeline {
         stage('Install requirements') { 
 
            steps { 
+               
+                def nodejsInstallation = tool name: 'Node.js 16', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
+                    env.PATH = "${nodejsInstallation}/bin:${env.PATH}"
 
                sh """ 
 
