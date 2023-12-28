@@ -9,8 +9,9 @@ pipeline {
         stage('Clone the repo') {
 
             steps {
-
-                git branch: 'dangelo', url: 'git@github.com:thevirginia/kpr-automation-test.git'
+                script {
+                    git branch: 'dangelo', url: 'git@github.com:thevirginia/kpr-automation-test.git'
+                }
 
             }
 
