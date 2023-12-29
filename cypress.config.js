@@ -26,12 +26,14 @@ module.exports = defineConfig({
     e2e: {
         failOnStatusCode: false,
         chromeWebSecurity: false,
+        videoUploadOnPasses: false,
+        trashAssetsBeforeRuns: true,
         experimentalModifyObstructiveThirdPartyCode: true,
         specPattern: "cypress/features/**/*.feature",
         setupNodeEvents: async function (on, config) {
             const envFile = `.env.${config.env.NODE_ENV || 'develop'}`
             dotenv.config({ path: envFile })
-            config.env={
+            config.env = {
                 ...config.env,
                 ...process.env
             }
@@ -39,10 +41,10 @@ module.exports = defineConfig({
             await addCucumberPreprocessorPlugin(on, config);
             on('before:browser:launch', (browser = {}, launchOptions) => {
                 if (browser.family === 'chromium' && browser.name !== 'electron') {
-                  launchOptions.args.push('--mute-audio');
-                  return launchOptions;
+                    launchOptions.args.push('--mute-audio');
+                    return launchOptions;
                 }
-              });
+            });
             on(
                 'file:preprocessor',
                 webpack({
@@ -68,6 +70,8 @@ module.exports = defineConfig({
             return config;
         }
     },
+    videoUploadOnPasses: false,
+    trashAssetsBeforeRuns: true,
     defaultCommandTimeout: 10000,
     defaultpageLoadTimeout: 100000
 });
