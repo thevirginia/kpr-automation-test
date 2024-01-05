@@ -3,7 +3,11 @@
 Feature:Chibi
 
     Background:
-        Given A user opens MintPage
+        Given A user opens a Mint Page in "staging"
+        When A user enters the email "hahipoy739@wenkuu.com"
+        And A user enters the password "hahipoy739.."
+        And A user clicks on the login button
+        And A user clicks on the close button of the modal
 
     Scenario: Buying Chi-Bi with Ethereum
         When user clicks one amount

@@ -1,5 +1,6 @@
 import { Given, Then, When } from "@badeball/cypress-cucumber-preprocessor";
 import BuyChibi from "../../support/page/BuyChibi";
+///<reference types="cypress-iframe" />
 
 const clickElement = (element) => {
   element.should('be.visible').click({ force: true, timeout: 1500 });
@@ -57,7 +58,7 @@ When('select checkout button', () => {
 });
 
 When('select Ethereum option', () => {
-  clickElement(BuyChibi.getEthereumOption().eq(1));
+  clickElement(BuyChibi.getEthereumOption().eq(0));
 });
 
 When('select Continue option', () => {
@@ -87,3 +88,4 @@ Then('valid that the {string} text is displayed', (text) => {
 Then('select Credit Card or Debit Card', () => {
   clickElement(BuyChibi.getCreditDebitCard().eq(0));
 });
+

@@ -38,7 +38,7 @@ Given('A user opens a login website in {string}', (env) => {
 });
 
 Given('A user clicks on the login to kprverse button', () => {
-    loginPage.loginToKprverseBtn().click({ force: true, timeout: 150000 });
+    loginPage.loginToKprverseBtn().click({ force: true, timeout: 300000 });
 });
 
 Given('A user enters the password in the home page', () => {
@@ -181,4 +181,9 @@ Then('A user clicks on the Send Verification Code button', () => {
 
 Then('valid if the user has been able to register', () => {
     loginPage.verifyEmailTitle().should('be.visible');
+});
+
+When('A user clicks on the close button of the modal', () => {
+    loginPage.connectWallet().should('be.visible');
+    loginPage.closeButton().click({ force: true });
 });

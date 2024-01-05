@@ -82,5 +82,6 @@ class LoginPage {
     settingsTitle2(){
         return cy.get('h2[class="jsx-484c5d75a9787ce1 Login_loginTitle__iWqKZ"]')
     }
+    
 }
 export default LoginPage;

@@ -1,7 +1,8 @@
 class BuyChibi {
     getOneBuyChibi() {
-        return cy.get('input[class=".itemAmount_checkbox__m9Qvo"]');
+        return cy.get('.itemAmount_checkbox__m9Qvo');
     }
+    //return cy.get('input[class=".itemAmount_checkbox__m9Qvo"]');
 
     getCheckoutButton() {
         return cy.get('button[class="styles_btnNext__wpusF"]');
@@ -28,7 +29,7 @@ class BuyChibi {
     }
 
     getCurrencyText() {
-        return cy.get('div[class="styles_infoPrice__FtfOb"]');
+        return cy.get('span[class="itemAmount_price__8r3ku"]');
     }
 
     getTextTitleChibi() {

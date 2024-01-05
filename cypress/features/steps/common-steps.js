@@ -4,7 +4,7 @@ const urlMintPage = Cypress.env('URL_MINTPAGE')
 const urlMintStagPage = Cypress.env('URL_MINTPAGE')
 
 Given("A user opens MintPage", () => {
-  cy.visit(url + '/MintPage')
+  cy.visit(url)
 });
 
 Given("A user opens DetailKeepers", () => {
