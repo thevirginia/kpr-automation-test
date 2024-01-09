@@ -16,7 +16,9 @@ Feature:Chibi
         And select Continue option
         And select Metamask option
         And select Confirm button
-        Then I should see "Transaction Pending..." text
+        And A user enters the Cardholder name "test test"
+        And A user enters the Card number "4242424242424242"
+        Then I should see "Google Pay is not set up" in modal
 
     Scenario: Buying with credit or debit card
         When user clicks one amount
