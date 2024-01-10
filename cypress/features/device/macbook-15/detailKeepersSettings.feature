@@ -5,41 +5,44 @@ Feature: Detail Keepers settings
     Background:
         Given A user opens Detail Keepers Settings
         And I change the resolution to "macbook-15"
+        And A user enters the Sign In button
+        When A user enters the email "hahipoy739@wenkuu.com"
+        And A user enters the password "hahipoy739.."
+        And A user clicks on the login button
+        And A user clicks on the close button of the modal
 
-    Scenario Outline: Validate DetailKeepers Settings
+    Scenario Outline: Validate Settings page
         Then validate that the "<Text>" is displayed
 
         Examples:
-            | Text               |
-            | SIGN IN            |
-            | BIO                |
-            | SAVE CHANGES       |
-            | REPRESENTATIVE PFP |
-            | KEEPER #00000      |
-            | REMOVE             |
-            | CHANGE PFP         |
-            | nickname           |
-            | LOGIN DETAILS      |
-            | EDIT               |
-            | Email Address      |
-            | Password           |
-            | WALLETS            |
-            | CONNECT NEW WALLET |
-            | DISCONNECT         |
-            | SOCIAL             |
-            | CONNECT            |
-            | GOOGLE             |
-            | TWITTER            |
-            | NOTIFICATIONS      |
-            | CRYPTO WALLET      |
+            | Text                 |
+            | SETTINGS             |
+            | PROFILE DETAILS      |
+            | SAVE CHANGES         |
+            | AVATAR               |
+            | No Keeper Found      |
+            #    | REMOVE             |
+            | EDIT AVATAR          |
+            | NICKNAME             |
+            | LOGIN DETAILS        |
+            | CHANGE PASSWORD      |
+            | EMAIL ADDRESS        |
+            #    | Password           |
+            | CUSTODIAL WALLET     |
+            | CONNECT A NEW WALLET |
+            | No Wallet Connected  |
+    #    | SOCIAL             |
+    #    | CONNECT            |
+    #    | GOOGLE             |
+    #    | TWITTER            |
+    #    | NOTIFICATIONS      |
+    #    | CRYPTO WALLET      |
 
-    Scenario Outline: Validate DetailKeepers Settings anchors at the left
+    Scenario Outline: Validate Settings page anchors at the left
         Then validate that the "<Anchors>" is displayed
 
         Examples:
-            | Anchors       |
-            | BIO           |
-            | LOGIN DETAILS |
-            | WALLET        |
-            | SOCIAL        |
-            | NOTIFICATIONS |
+            | Anchors          |
+            | PROFILE DETAILS  |
+            | LOGIN DETAILS    |
+            | CUSTODIAL WALLET |

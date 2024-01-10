@@ -82,6 +82,10 @@ Given('I change the resolution to {string}', (resolution) => {
     }
 })
 
+Given('A user enters the Sign In button', () => {
+    loginPage.signInButtonStg().click({ force: true });
+});
+
 
 When('A user enters the email {string}', (email) => {
     loginPage.emailField().type(email);

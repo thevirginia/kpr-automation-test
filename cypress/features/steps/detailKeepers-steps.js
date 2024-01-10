@@ -70,54 +70,53 @@ Then('validate that the {string} is displayed', (text) => {
             validateText(DetailKeepers.getMarketText().last(), text);
             break;
         case "CITIZEN PROFILE":
+       // case "SIGN OUT":
+         //   validateText(DetailKeepers.getProfileDropdownText(), text);
+         //   break;
         case "SETTINGS":
-        case "SIGN OUT":
-            validateText(DetailKeepers.getProfileDropdownText(), text);
+            validateText(DetailKeepers.getSettingsText(), 'SETTINGS');
             break;
-        case "SIGN IN":
-            validateText(DetailKeepers.getSignInText(), 'SIGN IN');
-            break;
-        case "BIO":
-            validateText(DetailKeepers.getBioText().first(), 'BIO');
+        case "PROFILE DETAILS":
+            validateText(DetailKeepers.getBioText().first(), 'PROFILE DETAILS');
             break;
         case "SAVE CHANGES":
-            validateText(DetailKeepers.getSaveChangesText(), 'SAVE CHANGES');
+            validateText(DetailKeepers.getSaveChangesText().first(), 'SAVE CHANGES');
             break;
-        case "REPRESENTATIVE PFP":
-            validateText(DetailKeepers.getRepresentativePFPText(), 'REPRESENTATIVE PFP');
+        case "AVATAR":
+            validateText(DetailKeepers.getRepresentativePFPText(), 'AVATAR');
             break;
-        case "KEEPER #00000":
-            validateText(DetailKeepers.getKeeperNumberText(), 'KEEPER #00000');
+        case "No Keeper Found":
+            validateText(DetailKeepers.getKeeperNumberText(), 'No Keeper Found');
             break;
         case "REMOVE":
             validateText(DetailKeepers.getRemoveText().last(), 'REMOVE');
             break;
-        case "CHANGE PFP":
-            validateText(DetailKeepers.getChangePFText(), 'CHANGE PFP');
+        case "EDIT AVATAR":
+            validateText(DetailKeepers.getSaveChangesText().last(), 'EDIT AVATAR');
             break;
-        case "nickname":
-            validateText(DetailKeepers.getNicknameText(), 'nickname');
+        case "NICKNAME":
+            validateText(DetailKeepers.getNicknameText(), 'NICKNAME');
             break;
         case "LOGIN DETAILS":
             validateText(DetailKeepers.getLoginDetailsText().eq(1), 'LOGIN DETAILS');
             break;
-        case "EDIT":
-            validateText(DetailKeepers.getEditText(), 'EDIT');
+        case "CHANGE PASSWORD":
+            validateText(DetailKeepers.getEditText().first(), 'CHANGE PASSWORD');
             break;
-        case "Email Address":
-            validateText(DetailKeepers.getEmailAddressText().eq(1), 'Email Address');
+        case "EMAIL ADDRESS":
+            validateText(DetailKeepers.getEmailAddressText().eq(1), 'EMAIL ADDRESS');
             break;
         case "Password":
             validateText(DetailKeepers.getPasswordText().eq(1), 'Password');
             break;
-        case "WALLETS":
-            validateText(DetailKeepers.getWalletsText().eq(2), 'WALLETS');
+        case "CUSTODIAL WALLET":
+            validateText(DetailKeepers.getWalletsText().eq(2), 'CUSTODIAL WALLET');
             break;
-        case "CONNECT NEW WALLET":
-            validateText(DetailKeepers.getConnectNewWalletText().last(), 'CONNECT NEW WALLET');
+        case "CONNECT A NEW WALLET":
+            validateText(DetailKeepers.getConnectNewWalletText().last(), 'CONNECT A NEW WALLET');
             break;
-        case "DISCONNECT":
-            validateText(DetailKeepers.getDisconnectText(), 'DISCONNECT');
+        case "No Wallet Connected":
+            validateText(DetailKeepers.getNoWalletConnectedText(), 'No Wallet Connected');
             break;
         case "SOCIAL":
             validateText(DetailKeepers.getSocialText().eq(3), 'SOCIAL');

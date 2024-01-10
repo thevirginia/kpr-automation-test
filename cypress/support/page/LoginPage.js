@@ -79,9 +79,13 @@ class LoginPage {
         return cy.get('.jsx-10766fb532205367.Login_loginTitle__iWqKZ')
     }
 
-    settingsTitle2(){
+    settingsTitle2() {
         return cy.get('h2[class="jsx-484c5d75a9787ce1 Login_loginTitle__iWqKZ"]')
     }
-    
+
+    signInButtonStg() {
+        return cy.get('.login-btn')
+    }
+
 }
 export default LoginPage;

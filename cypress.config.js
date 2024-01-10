@@ -18,6 +18,7 @@ module.exports = defineConfig({
         URL_WIDGET: process.env.URL_WIDGET,
         URL_MINTPAGE: process.env.URL_MINTPAGE,
         URL_SETTINGS: process.env.URL_SETTINGS,
+        URL_HAVEN_KPR: process.env.URL_HAVEN_KPR,
         allure: true,
         allureReuseAfterSpec: true,
         stepDefinitions: `**/*-steps.js`,

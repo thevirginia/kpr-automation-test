@@ -83,8 +83,8 @@ class DetailKeepers {
         return cy.get('div[class="styles_userMenu__xU7BY undefined"]')
     }
 
-    getSignInText() {
-        return cy.get('div[class="styles_signMenu__9qKKL"]');
+    getSettingsText() {
+        return cy.get('div[class="styles_container__Tv4JR"]');
     }
 
     getBioText() {
@@ -92,7 +92,7 @@ class DetailKeepers {
     }
 
     getSaveChangesText() {
-        return cy.get('button[class="styles_buttonGray__LYojV undefined "]');
+        return cy.get('button[class="styles_buttonWhite__dooHj styles_outlineWhite__9K4A9"]');
     }
 
     getRepresentativePFPText() {
@@ -100,7 +100,7 @@ class DetailKeepers {
     }
 
     getKeeperNumberText() {
-        return cy.get('span[class="styles_text__1Qx7k globals_font24__6Q0i_ globals_ptop20__fqAkT"]');
+        return cy.get('span[class="styles_titleKeeper__Yspb8 globals_font24__6Q0i_ globals_ptop20__fqAkT"]');
     }
 
     getRemoveText() {
@@ -112,7 +112,7 @@ class DetailKeepers {
     }
 
     getNicknameText() {
-        return cy.get('label[class="input_inputSubTopText__012s_"]');
+        return cy.get('div[class="styles_inputBox__Ksgon"]');
     }
 
     getLoginDetailsText() {
@@ -124,7 +124,7 @@ class DetailKeepers {
     }
 
     getEmailAddressText() {
-        return cy.get('div[class="styles_body__O8bvq"]');
+        return cy.get('div[class="styles_inputBox__Ksgon"]');
     }
 
     getPasswordText() {
@@ -139,8 +139,8 @@ class DetailKeepers {
         return cy.get('button[class="styles_buttonDefault__usd_6"]');
     }
 
-    getDisconnectText() {
-        return cy.get('span[class="styles_disconnect__2Y_Y5"]');
+    getNoWalletConnectedText() {
+        return cy.get('span[class="styles_address__HSKm7"]');
     }
 
     getSocialText() {
