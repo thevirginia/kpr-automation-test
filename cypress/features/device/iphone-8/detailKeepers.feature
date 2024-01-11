@@ -1,11 +1,9 @@
 @feature("Detail_Keepers")
-@story("Detail_Keepers")
 Feature: Detail Keepers
 
     Background:
         Given A user opens DetailKeepers
         And I change the resolution to "iphone-8"
-
 
     Scenario Outline: Validate DetailKeepers page - <Text>
         Then validate that the "<Text>" is displayed
@@ -33,8 +31,7 @@ Feature: Detail Keepers
             | POINTS COLLECTED          |
             | Market                    |
 
-
-    Scenario Outline: Validate Dropdown from Nickname
+    Scenario Outline: Validation of the Nickname dropdown
         When select Nickname dropdown
         Then validate that the "<Text>" is displayed
 

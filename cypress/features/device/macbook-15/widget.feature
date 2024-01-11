@@ -1,5 +1,4 @@
 @feature("Widget")
-@story("Widget")
 Feature: Widget
 
     Feature Login page will work depending on the user credentials
@@ -51,7 +50,6 @@ Feature: Widget
         And valid "Password" background text is visible
         And valid "Confirm Password" background text is visible
 
-
     Scenario: Successful registration in Widget page
         When A user clicks on the sign up button
         And A user enters the nickname
@@ -61,19 +59,16 @@ Feature: Widget
         And A user clicks on the login button
         Then valid if the user has been able to register
 
-
     Scenario: home page texts in Widget page
         Then valid that the text "Welcome back Keeper" is visible
         And valid that the text "Forgot Password?" is visible
         And valid that the text "OR SIGN IN WITH SOCIALS" is visible
         And valid that the text "Dont have an account?" is visible
 
-
-    Scenario: valid the back button in the sign up modal in Widget page
+    Scenario: validate the back button in the sign up modal in Widget page
         When A user clicks on the sign up button
         And A user clicks on the back button
         Then valid button on the home page
-
 
     Scenario: forgot Password modal in Widget page
         When A user clicks on the forgot Password button

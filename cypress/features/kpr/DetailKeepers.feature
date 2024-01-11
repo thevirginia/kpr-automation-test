@@ -1,10 +1,8 @@
 @feature("Detail_Keepers")
-@story("Detail_Keepers")
 Feature: Detail Keepers
 
     Background:
         Given A user opens DetailKeepers
-
 
     Scenario Outline: Validate DetailKeepers page - <Text>
         Then validate that the "<Text>" is displayed
@@ -31,7 +29,6 @@ Feature: Detail Keepers
             | CITIZEN NAME              |
             | POINTS COLLECTED          |
             | Market                    |
-
 
     Scenario Outline: Validate Dropdown from Nickname
         When select Nickname dropdown

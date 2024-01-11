@@ -1,5 +1,4 @@
 @feature("Login_Settings")
-@story("Login_Settings")
 Feature: Login Settings
 
     Feature Login page will work depending on the user credentials
@@ -50,7 +49,6 @@ Feature: Login Settings
         And valid "Password" background text is visible
         And valid "Confirm Password" background text is visible
 
-
     Scenario: Successful registration in setting page
         When A user clicks on the sign up button
         And A user enters the nickname
@@ -60,19 +58,16 @@ Feature: Login Settings
         And A user clicks on the login button
         Then valid if the user has been able to register
 
-
     Scenario: home page texts in setting page
         Then valid that the text "Welcome back Keeper" is visible
         And valid that the text "Forgot Password?" is visible
         And valid that the text "OR SIGN IN WITH SOCIALS" is visible
         And valid that the text "Dont have an account?" is visible
 
-
-    Scenario: valid the back button in the sign up modal in setting page
+    Scenario: validate the back button in the sign up modal in setting page
         When A user clicks on the sign up button
         And A user clicks on the back button
         Then valid button on the home page
-
 
     Scenario: forgot Password modal in setting page
         When A user clicks on the forgot Password button

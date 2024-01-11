@@ -1,5 +1,4 @@
 @feature("Login_Mint")
-@story("Login_Mint")
 Feature: Login Mint
 
     Feature Login page will work depending on the user credentials
@@ -50,7 +49,6 @@ Feature: Login Mint
         And valid "Password" background text is visible
         And valid "Confirm Password" background text is visible
 
-
     Scenario: Successful registration in Mint page
         When A user clicks on the sign up button
         And A user enters the nickname
@@ -60,19 +58,16 @@ Feature: Login Mint
         And A user clicks on the login button
         Then valid if the user has been able to register
 
-
     Scenario: home page texts in Mint page
         Then valid that the text "Welcome back Keeper" is visible
         And valid that the text "Forgot Password?" is visible
         And valid that the text "OR SIGN IN WITH SOCIALS" is visible
         And valid that the text "Dont have an account?" is visible
 
-
-    Scenario: valid the back button in the sign up modal in Mint page
+    Scenario: validate the back button in the sign up modal in Mint page
         When A user clicks on the sign up button
         And A user clicks on the back button
         Then valid button on the home page
-
 
     Scenario: forgot Password modal in Mint page
         When A user clicks on the forgot Password button

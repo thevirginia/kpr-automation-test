@@ -1,5 +1,4 @@
 @feature("Detail_Keepers_settings")
-@story("Detail_Keepers_settings")
 Feature: Detail Keepers settings
 
     Background:
@@ -21,22 +20,14 @@ Feature: Detail Keepers settings
             | SAVE CHANGES         |
             | AVATAR               |
             | No Keeper Found      |
-            #    | REMOVE             |
             | EDIT AVATAR          |
             | NICKNAME             |
             | LOGIN DETAILS        |
             | CHANGE PASSWORD      |
             | EMAIL ADDRESS        |
-            #    | Password           |
             | CUSTODIAL WALLET     |
             | CONNECT A NEW WALLET |
             | No Wallet Connected  |
-    #    | SOCIAL             |
-    #    | CONNECT            |
-    #    | GOOGLE             |
-    #    | TWITTER            |
-    #    | NOTIFICATIONS      |
-    #    | CRYPTO WALLET      |
 
     Scenario Outline: Validate Settings page anchors at the left
         Then validate that the "<Anchors>" is displayed

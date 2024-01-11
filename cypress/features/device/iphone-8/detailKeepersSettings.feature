@@ -1,5 +1,4 @@
 @feature("Detail_Keepers_settings")
-@story("Detail_Keepers_settings")
 Feature: Detail Keepers settings
 
     Background:

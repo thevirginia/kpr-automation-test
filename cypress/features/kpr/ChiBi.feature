@@ -1,6 +1,5 @@
-@feature("Chibi")
-@story("Chibi")
-Feature:Chibi
+@feature("Chibi-Koya_MintPage)
+Feature:Chibi-Koya MintPage
 
     Background:
         Given A user opens a Mint Page in "staging"
@@ -59,4 +58,3 @@ Feature:Chibi
         And select Metamask option
         Then valid that the "Wallet Connected" text is displayed
         And valid that the "CONNECT A DIFFERENT WALLET" text is displayed
-
