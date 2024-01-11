@@ -2,13 +2,14 @@ import { Given, Then, When } from "@badeball/cypress-cucumber-preprocessor";
 const url = Cypress.env('URL_SETTINGS')
 const urlMintPage = Cypress.env('URL_MINTPAGE')
 const urlMintStagPage = Cypress.env('URL_MINTPAGE')
+const UrlHavenKPR = Cypress.env('URL_HAVEN_KPR')
 
 Given("A user opens MintPage", () => {
   cy.visit(url)
 });
 
 Given("A user opens DetailKeepers", () => {
-  cy.visit(url + '/DetailKeepers')
+  cy.visit(UrlHavenKPR)
 });
 
 Given('A user opens Detail Keepers Settings', () => {

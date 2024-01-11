@@ -1,20 +1,20 @@
 class DetailKeepers {
 
     getKeeperWelcomeText() {
-        return cy.get('span[class="styles_welcomeText__VZNfu"]');
+        return cy.get('span[class="styles_welcomeText__m+HIT"]');
     }
 
     getYourDispatchedText() {
-        return cy.get('div[class="styles_statsContent__Gwhiz"]');
+        return cy.get('div[class="styles_informationQuanty__MVfZq"]');
     }
     getYourPointsText() {
         return cy.get('div[class="styles_statsContent__Gwhiz"]')
     }
     getKeepersTitle() {
-        return cy.get('h2[class="styles_title__mh8GS"]');
+        return cy.get('div[class="globals_column__pUL1B"]');
     }
     getHavenText() {
-        return cy.get('div[class="styles_header__crUfW"]')
+        return cy.get('span[class="styles_numberInfo__OY2N2"]')
     }
     getNoKeepersNFTsText() {
         return cy.get('div[class="styles_wrapper__PNVk5 globals_spaceBetween__ANdJo"]')
@@ -24,7 +24,7 @@ class DetailKeepers {
     }
 
     getViewCitizenshipText() {
-        return cy.get('div[class="point-generators_pointGeneratorHeader__ZD6oh"]');
+        return cy.get('div[class="styles_havenBanner__NeMT8"]');
     }
 
     getKeepersDispatchedText() {

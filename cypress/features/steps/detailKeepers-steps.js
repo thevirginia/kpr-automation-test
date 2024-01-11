@@ -13,25 +13,25 @@ Then('validate that the {string} is displayed', (text) => {
             validateText(DetailKeepers.getKeeperWelcomeText(), 'Keeper, welcome to Haven!');
             break;
         case "YOUR DISPATCHED KEEPERS":
-            validateText(DetailKeepers.getYourDispatchedText(), 'YOUR DISPATCHED KEEPERS');
+            validateText(DetailKeepers.getYourDispatchedText().first(), 'YOUR DISPATCHED KEEPERS');
             break;
         case "YOUR POINTS":
-            validateText(DetailKeepers.getYourPointsText(), 'YOUR POINTS');
+            validateText(DetailKeepers.getYourDispatchedText().last(), 'YOUR POINTS');
             break;
-        case "Keepers":
-            validateText(DetailKeepers.getKeepersTitle(), 'Keepers');
+        case "GLOBAL KEEPERS DISPATCHED":
+            validateText(DetailKeepers.getKeepersTitle().first(), 'GLOBAL KEEPERS DISPATCHED');
             break;
-        case "Haven":
-            validateText(DetailKeepers.getHavenText(), 'Haven');
+        case "2,304":
+            validateText(DetailKeepers.getHavenText().first(), '2,304');
             break;
-        case "No Keepers NFTs are found":
-            validateText(DetailKeepers.getNoKeepersNFTsText(), 'No Keepers NFTs are found');
+        case "GLOBAL POINTS COLLECTED":
+            validateText(DetailKeepers.getKeepersTitle().last(), 'GLOBAL POINTS COLLECTED');
             break;
-        case "Point Generators":
-            validateText(DetailKeepers.getPointGeneratorsText(), 'Point Generators');
+        case "234,509":
+            validateText(DetailKeepers.getHavenText().last(), '234,509');
             break;
-        case "VIEW CITIZENSHIP":
-            validateText(DetailKeepers.getViewCitizenshipText(), 'VIEW CITIZENSHIP');
+        case "HAVEN":
+            validateText(DetailKeepers.getViewCitizenshipText(), 'HAVEN');
             break;
         case "KEEPERS DISPATCHED":
             validateText(DetailKeepers.getKeepersDispatchedText(), 'KEEPERS DISPATCHED');
@@ -70,9 +70,9 @@ Then('validate that the {string} is displayed', (text) => {
             validateText(DetailKeepers.getMarketText().last(), text);
             break;
         case "CITIZEN PROFILE":
-       // case "SIGN OUT":
-         //   validateText(DetailKeepers.getProfileDropdownText(), text);
-         //   break;
+        // case "SIGN OUT":
+        //   validateText(DetailKeepers.getProfileDropdownText(), text);
+        //   break;
         case "SETTINGS":
             validateText(DetailKeepers.getSettingsText(), 'SETTINGS');
             break;
