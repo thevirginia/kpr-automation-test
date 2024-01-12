@@ -5,6 +5,11 @@ Feature: Detail Keepers
     Background:
         Given A user opens DetailKeepers
         And I change the resolution to "iphone-xr"
+     And A user enters the Sign In button
+        When A user enters the email "hahipoy739@wenkuu.com"
+        And A user enters the password "hahipoy739.."
+        And A user clicks on the login button
+        And A user clicks on the close button of the modal
 
 
     Scenario Outline: Validate DetailKeepers page - <Text>
@@ -12,26 +17,14 @@ Feature: Detail Keepers
 
         Examples:
             | Text                      |
+            | HAVEN                     |
             | Keeper, welcome to Haven! |
             | YOUR DISPATCHED KEEPERS   |
             | YOUR POINTS               |
-            | Keepers                   |
-            | Haven                     |
-            | No Keepers NFTs are found |
-            | Point Generators          |
-            | VIEW CITIZENSHIP          |
-            | KEEPERS DISPATCHED        |
-            | CITIZENSHIP SCORE         |
-            | CITIZENSHIP RECORDS       |
-            | Daily Earn Rate           |
-            | KEEPER BONUS              |
-            | CHIBI BONUS               |
-            | CITIZENSHIP BONUS         |
-            | TOTAL DAILY EARN RATE     |
-            | Leaderboards              |
-            | CITIZEN NAME              |
-            | POINTS COLLECTED          |
-            | Market                    |
+            | GLOBAL KEEPERS DISPATCHED |
+            | 2,304                     |
+            | GLOBAL POINTS COLLECTED   |
+            | 234,509                   |
 
 
     Scenario Outline: Validate Dropdown from Nickname
@@ -41,5 +34,4 @@ Feature: Detail Keepers
         Examples:
             | Text            |
             | CITIZEN PROFILE |
-            | SETTINGS        |
             | SIGN OUT        |

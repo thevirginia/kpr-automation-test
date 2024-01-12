@@ -76,11 +76,11 @@ class DetailKeepers {
     }
 
     getProfileDropdownText() {
-        return cy.get('div[class="styles_openModalUser__9zClD"]');
+        return cy.get('div[class="itemsContainer"]');
     }
 
     getProfileDropdown() {
-        return cy.get('div[class="styles_userMenu__xU7BY undefined"]')
+        return cy.get('div[class="authContainer"]')
     }
 
     getSettingsText() {

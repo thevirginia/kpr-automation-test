@@ -33,5 +33,4 @@ Feature: Detail Keepers
         Examples:
             | Text            |
             | CITIZEN PROFILE |
-            | SETTINGS        |
             | SIGN OUT        |

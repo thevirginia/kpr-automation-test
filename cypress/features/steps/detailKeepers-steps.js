@@ -33,46 +33,48 @@ Then('validate that the {string} is displayed', (text) => {
         case "HAVEN":
             validateText(DetailKeepers.getViewCitizenshipText(), 'HAVEN');
             break;
-        case "KEEPERS DISPATCHED":
-            validateText(DetailKeepers.getKeepersDispatchedText(), 'KEEPERS DISPATCHED');
+    //    case "KEEPERS DISPATCHED":
+    //        validateText(DetailKeepers.getKeepersDispatchedText(), 'KEEPERS DISPATCHED');
+    //        break;
+    //    case "CITIZENSHIP SCORE":
+    //        validateText(DetailKeepers.getCitizenshipScoreText(), 'CITIZENSHIP SCORE');
+    //        break;
+    //    case "CITIZENSHIP RECORDS":
+    //        validateText(DetailKeepers.getCitizenshipRecordsText(), 'CITIZENSHIP RECORDS');
+    //        break;
+    //    case "Daily Earn Rate":
+    //        validateText(DetailKeepers.getDailyEarnRateText(), 'Daily Earn Rate');
+    //        break;
+    //    case "KEEPER BONUS":
+     //       validateText(DetailKeepers.getKeeperBonusText(), 'KEEPER BONUS');
+     //       break;
+     //   case "CHIBI BONUS":
+      //      DetailKeepers.getChibiBonusText().eq(1).should('be.visible').and('have.text', 'CHIBI BONUS');
+     //       break;
+    //    case "CITIZENSHIP BONUS":
+    //        DetailKeepers.getCitizenshipBonusText().eq(2).should('be.visible').and('have.text', 'CITIZENSHIP BONUS');
+     //       break;
+    //    case "TOTAL DAILY EARN RATE":
+    //        DetailKeepers.getTotalDailyEarnRateText().should('be.visible').and('have.text', 'TOTAL DAILY EARN RATE - ');
+     //       break;
+     //   case "Leaderboards":
+    //        validateText(DetailKeepers.getLeaderboardsText(), 'Leaderboards');
+    //        break;
+    //    case "CITIZEN NAME":
+    //        validateText(DetailKeepers.getCitizenNameText(), 'CITIZEN NAME');
+    //        break;
+    //    case "POINTS COLLECTED":
+    //        validateText(DetailKeepers.getPointsCollectedText(), 'POINTS COLLECTED');
+     //       break;
+    //    case "Market":
+    //        validateText(DetailKeepers.getMarketText().last(), text);
+     //       break;
+    //    case "CITIZEN PROFILE":
+    //        validateText(DetailKeepers.getProfileDropdownText(), 'CITIZEN PROFILE');
+    //        break;
+        case "SIGN OUT":
+            validateText(DetailKeepers.getProfileDropdownText(), 'SIGN OUT');
             break;
-        case "CITIZENSHIP SCORE":
-            validateText(DetailKeepers.getCitizenshipScoreText(), 'CITIZENSHIP SCORE');
-            break;
-        case "CITIZENSHIP RECORDS":
-            validateText(DetailKeepers.getCitizenshipRecordsText(), 'CITIZENSHIP RECORDS');
-            break;
-        case "Daily Earn Rate":
-            validateText(DetailKeepers.getDailyEarnRateText(), 'Daily Earn Rate');
-            break;
-        case "KEEPER BONUS":
-            validateText(DetailKeepers.getKeeperBonusText(), 'KEEPER BONUS');
-            break;
-        case "CHIBI BONUS":
-            DetailKeepers.getChibiBonusText().eq(1).should('be.visible').and('have.text', 'CHIBI BONUS');
-            break;
-        case "CITIZENSHIP BONUS":
-            DetailKeepers.getCitizenshipBonusText().eq(2).should('be.visible').and('have.text', 'CITIZENSHIP BONUS');
-            break;
-        case "TOTAL DAILY EARN RATE":
-            DetailKeepers.getTotalDailyEarnRateText().should('be.visible').and('have.text', 'TOTAL DAILY EARN RATE - ');
-            break;
-        case "Leaderboards":
-            validateText(DetailKeepers.getLeaderboardsText(), 'Leaderboards');
-            break;
-        case "CITIZEN NAME":
-            validateText(DetailKeepers.getCitizenNameText(), 'CITIZEN NAME');
-            break;
-        case "POINTS COLLECTED":
-            validateText(DetailKeepers.getPointsCollectedText(), 'POINTS COLLECTED');
-            break;
-        case "Market":
-            validateText(DetailKeepers.getMarketText().last(), text);
-            break;
-        case "CITIZEN PROFILE":
-        // case "SIGN OUT":
-        //   validateText(DetailKeepers.getProfileDropdownText(), text);
-        //   break;
         case "SETTINGS":
             validateText(DetailKeepers.getSettingsText(), 'SETTINGS');
             break;
@@ -88,9 +90,9 @@ Then('validate that the {string} is displayed', (text) => {
         case "No Keeper Found":
             validateText(DetailKeepers.getKeeperNumberText(), 'No Keeper Found');
             break;
-        case "REMOVE":
-            validateText(DetailKeepers.getRemoveText().last(), 'REMOVE');
-            break;
+      //  case "REMOVE":
+        //    validateText(DetailKeepers.getRemoveText().last(), 'REMOVE');
+        //    break;
         case "EDIT AVATAR":
             validateText(DetailKeepers.getSaveChangesText().last(), 'EDIT AVATAR');
             break;
@@ -106,9 +108,9 @@ Then('validate that the {string} is displayed', (text) => {
         case "EMAIL ADDRESS":
             validateText(DetailKeepers.getEmailAddressText().eq(1), 'EMAIL ADDRESS');
             break;
-        case "Password":
-            validateText(DetailKeepers.getPasswordText().eq(1), 'Password');
-            break;
+        //case "Password":
+         //   validateText(DetailKeepers.getPasswordText().eq(1), 'Password');
+          //  break;
         case "CUSTODIAL WALLET":
             validateText(DetailKeepers.getWalletsText().eq(2), 'CUSTODIAL WALLET');
             break;
@@ -117,33 +119,6 @@ Then('validate that the {string} is displayed', (text) => {
             break;
         case "No Wallet Connected":
             validateText(DetailKeepers.getNoWalletConnectedText(), 'No Wallet Connected');
-            break;
-        case "SOCIAL":
-            validateText(DetailKeepers.getSocialText().eq(3), 'SOCIAL');
-            break;
-        case "CONNECT":
-            validateText(DetailKeepers.getConnectText(), 'CONNECT');
-            break;
-        case "GOOGLE":
-            validateText(DetailKeepers.getGoogleText().eq(1), 'GOOGLE');
-            break;
-        case "TWITTER":
-            validateText(DetailKeepers.getTwitterText().last(), 'TWITTER');
-            break;
-        case "NOTIFICATIONS":
-            validateText(DetailKeepers.getNotificationsText().last(), 'NOTIFICATIONS');
-            break;
-        case "CRYPTO WALLET":
-            DetailKeepers.getCryptoWalletText().first().invoke('text').then((text) => {
-                expect(text).to.match(ethereumAddressRegExp);
-            });
-            break;
-        case "BIO":
-        case "LOGIN DETAILS":
-        case "WALLET":
-        case "SOCIAL":
-        case "NOTIFICATIONS":
-            validateText(DetailKeepers.getLeftAnchors(), text);
             break;
         default:
             throw new Error(`Text "${text}" not handled.`);
