@@ -5,7 +5,7 @@ Feature:Chibi-Koya MintPage
         Given A user opens MintPage
         And I change the resolution to "iphone-xr"
 
-    Scenario: Buying Chi-Bi with Ethereum
+    Scenario: Validation of Chi-Bi purchase with the Ethereum currency
         When user clicks one amount
         And select checkout button
         And select Ethereum option
@@ -14,7 +14,7 @@ Feature:Chibi-Koya MintPage
         And select Confirm button
         Then I should see "Transaction Pending..." text
 
-    Scenario: Buying with credit or debit card
+    Scenario: Buying Chi-Bi with credit or debit card
         When user clicks one amount
         And select checkout button
         And select Credit Card or Debit Card
@@ -23,12 +23,12 @@ Feature:Chibi-Koya MintPage
         And select Confirm button
         Then I should see "Transaction Pending..." text
 
-    Scenario: Chibi Checkout Page
+    Scenario: Checkout page display validation in Chi-Bi
         Then I validate the currency "USD"
         And valid that the "CHI-HOUSE PRODUCTION MACHINE" text is displayed
         And valid that the "SELECT AMOUNT" text is displayed
 
-    Scenario: ETH currency validation
+    Scenario: ETH currency option validation 
         When user clicks one amount
         And select checkout button
         And select Ethereum option

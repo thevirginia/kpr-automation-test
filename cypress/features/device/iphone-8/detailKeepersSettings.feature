@@ -10,7 +10,7 @@ Feature: Detail Keepers settings
         And A user clicks on the login button
         And A user clicks on the close button of the modal
 
-    Scenario Outline: Validate Settings page
+    Scenario Outline: Validate Settings page with Iphone 8
         Then validate that the "<Text>" is displayed
 
         Examples:
@@ -29,7 +29,7 @@ Feature: Detail Keepers settings
             | CONNECT A NEW WALLET |
             | No Wallet Connected  |
 
-    Scenario Outline: Validate Settings page anchors at the left
+    Scenario Outline: Validate Settings page anchors at the left with Iphone 8
         Then validate that the "<Anchors>" is displayed
 
         Examples:
