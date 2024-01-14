@@ -25,7 +25,11 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 Cypress.on("uncaught:exception", (err, runnable) => {
-    // returning false here prevents Cypress from
-    // failing the test
-    return false;
-  });
+  // returning false here prevents Cypress from
+  // failing the test
+  return false;
+});
+
+import 'cypress-iframe';
+
+import 'cypress-plugin-tab';

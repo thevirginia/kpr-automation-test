@@ -24,8 +24,11 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
-    - name: Run Cypress Tests
-      run: npm run ui-regression-allure || true
+    - name: Run Cypress Tests Staging
+      run: npm run cy:run:stg || true
+
+    - name: Run Cypress Tests Development
+      run: npm run cy:run:dev || true
 
     - name: Generate Allure Report
       run: npm run allure:report
@@ -42,6 +45,7 @@ jobs:
     - name: Copy Allure History to the gh-pages branch
       run: |
         #mkdir gh-pages
+        cp -r allure-report/* gh-pages
         cp -r allure-history/* gh-pages
 
     - name: Commit and Push Changes to gh-pages
