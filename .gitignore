@@ -132,3 +132,9 @@ dist
 allure-result/
 allure-report/
 allure-results/
+allure-history/
+cypress/videos/
+cucumber-report.html
+cypress/screenshots/
+jsonlogs/
+cucumber-messages.ndjson
