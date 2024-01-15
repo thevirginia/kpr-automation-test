@@ -1,5 +1,4 @@
 @feature("Settings")
-@story("Settings")
 Feature: Settings
 
     Background:
