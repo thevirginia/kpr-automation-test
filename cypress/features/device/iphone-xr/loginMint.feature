@@ -69,14 +69,14 @@ Feature: Login Mint
         And A user clicks on the back button
         Then valid button on the home page
 
-    Scenario: forgot Password modal in Mint page
+    Scenario: Validation of forgot password in the modal in Mint Page with Iphone XR
         When A user clicks on the forgot Password button
         Then valid that the text "Forgot your password" is visible
         And valid that the text "Verify your email address?" is visible
         And valid "Email Address" background text is visible
         And A user clicks on the Send Verification Code button
 
-    Scenario: empty nickname field in sign up in Mint page
+    Scenario: Validation of empty nickname field error message in Mint page with Iphone XR
         When A user clicks on the sign up button
         And A user enters the new email
         And A user enters the password "test2024.."
@@ -84,7 +84,7 @@ Feature: Login Mint
         And A user clicks on the login button
         Then valid error message of empty field
 
-    Scenario: empty email field in sign up in Mint page
+    Scenario: Validation of empty email field error message in Mint page with Iphone XR
         When A user clicks on the sign up button
         And A user enters the nickname
         And A user enters the password "test2024.."
@@ -92,7 +92,7 @@ Feature: Login Mint
         And A user clicks on the login button
         Then valid error message of empty field
 
-    Scenario: empty password field in sign up in Mint page
+    Scenario: Validation of empty password field error message in Mint page with Iphone XR
         When A user clicks on the sign up button
         And A user enters the nickname
         And A user enters the new email
@@ -100,7 +100,7 @@ Feature: Login Mint
         And A user clicks on the login button
         Then valid error message of empty field
 
-    Scenario: empty confirm password field in sign up in Mint page
+    Scenario: Validation of empty confirm password field error message in Mint page with Iphone XR
         When A user clicks on the sign up button
         And A user enters the nickname
         And A user enters the new email

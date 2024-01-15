@@ -4,7 +4,7 @@ Feature: Detail Keepers
     Background:
         Given A user opens DetailKeepers
 
-    Scenario Outline: Validate DetailKeepers page - <Text>
+    Scenario Outline: Validate DetailKeepers page - <Text> in KPR
         Then validate that the "<Text>" is displayed
 
         Examples:
@@ -30,7 +30,7 @@ Feature: Detail Keepers
             | POINTS COLLECTED          |
             | Market                    |
 
-    Scenario Outline: Validate Dropdown from Nickname
+    Scenario Outline: Validate Dropdown from Nickname in KPR
         When select Nickname dropdown
         Then validate that the "<Text>" is displayed
 

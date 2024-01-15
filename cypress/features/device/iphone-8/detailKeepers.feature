@@ -5,7 +5,7 @@ Feature: Detail Keepers
         Given A user opens DetailKeepers
         And I change the resolution to "iphone-8"
 
-    Scenario Outline: Validate DetailKeepers page - <Text>
+    Scenario Outline: Validate DetailKeepers page - <Text> with Iphone 8
         Then validate that the "<Text>" is displayed
 
         Examples:
@@ -31,7 +31,7 @@ Feature: Detail Keepers
             | POINTS COLLECTED          |
             | Market                    |
 
-    Scenario Outline: Validation of the Nickname dropdown
+    Scenario Outline: Validation of the Nickname dropdown with Iphone 8
         When select Nickname dropdown
         Then validate that the "<Text>" is displayed
 

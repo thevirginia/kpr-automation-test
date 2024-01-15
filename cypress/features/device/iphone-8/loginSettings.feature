@@ -9,39 +9,39 @@ Feature: Login Settings
         And A user clicks the Sign in button in the home page
 
     @severity("critical")
-    Scenario: Success Login in setting page
+    Scenario: Success Login in setting page with Iphone 8
         When A user enters the email "lovamin725@dpsols.com"
         And A user enters the password "lovamin725.."
         And A user clicks on the login button
         Then valid if the user has been able to login
 
-    Scenario: Validation of incorrect email error in Settings page login
+    Scenario: Validation of incorrect email error in Settings page login with Iphone 8
         When A user enters the email "test2026@gmail.com"
         And A user enters the password "test2024.."
         And A user clicks on the login button
         Then The error message is displayed
 
-    Scenario: Error validation on empty email field in Settings page login
+    Scenario: Error validation on empty email field in Settings page login with Iphone 8
         And A user enters the password "test2024.."
         And A user clicks on the login button
         Then valid error message of empty field
 
-    Scenario: Error validation on empty password field in Settings page login
+    Scenario: Error validation on empty password field in Settings page login with Iphone 8
         And A user enters the email "test2026@gmail.com"
         And A user clicks on the login button
         Then valid error message of empty field
 
-    Scenario: Validation of error in password and email text fields in Settings page login
+    Scenario: Validation of error in password and email text fields in Settings page login with Iphone 8
         And A user clicks on the login button
         Then valid error message of empty field
 
-    Scenario: Incorrect password validation in the Settings page login
+    Scenario: Incorrect password validation in the Settings page login with Iphone 8
         When A user enters the email "lovamin725@dpsols.com"
         And A user enters the password "test2026.."
         And A user clicks on the login button
         Then The error message is displayed
 
-    Scenario: Visibility of background texts in the signup of the settings page
+    Scenario: Visibility of background texts in the signup of the settings page with Iphone 8
         Then valid "Email" background text is visible
         And valid "Password" background text is visible
         And A user clicks on the sign up button
@@ -50,7 +50,7 @@ Feature: Login Settings
         And valid "Password" background text is visible
         And valid "Confirm Password" background text is visible
 
-    Scenario: Successful registration in setting page
+    Scenario: Successful registration in setting page with Iphone 8
         When A user clicks on the sign up button
         And A user enters the nickname
         And A user enters the new email
@@ -59,25 +59,25 @@ Feature: Login Settings
         And A user clicks on the login button
         Then valid if the user has been able to register
 
-    Scenario: Visibility of background texts on the settings home page
+    Scenario: Visibility of background texts on the settings home page with Iphone 8
         Then valid that the text "Welcome back Keeper" is visible
         And valid that the text "Forgot Password?" is visible
         And valid that the text "OR SIGN IN WITH SOCIALS" is visible
         And valid that the text "Dont have an account?" is visible
 
-    Scenario: validate the back button in the sign up modal in setting page
+    Scenario: validate the back button in the sign up modal in setting page with Iphone 8
         When A user clicks on the sign up button
         And A user clicks on the back button
         Then valid button on the home page
 
-    Scenario: forgot password validation in settings page modal
+    Scenario: forgot password validation in settings page modal with Iphone 8
         When A user clicks on the forgot Password button
         Then valid that the text "Forgot your password" is visible
         And valid that the text "Verify your email address?" is visible
         And valid "Email Address" background text is visible
         And A user clicks on the Send Verification Code button
 
-    Scenario: Error validation of empty nickname field in signup in settings page
+    Scenario: Error validation of empty nickname field in signup in settings page with Iphone 8
         When A user clicks on the sign up button
         And A user enters the new email
         And A user enters the password "test2024.."
@@ -85,7 +85,7 @@ Feature: Login Settings
         And A user clicks on the login button
         Then valid error message of empty field
 
-    Scenario: Validation of empty email text field error in settings page
+    Scenario: Validation of empty email text field error in settings page with Iphone 8
         When A user clicks on the sign up button
         And A user enters the nickname
         And A user enters the password "test2024.."
@@ -93,7 +93,7 @@ Feature: Login Settings
         And A user clicks on the login button
         Then valid error message of empty field
 
-    Scenario: Validation of empty password text field error in settings page
+    Scenario: Validation of empty password text field error in settings page with Iphone 8
         When A user clicks on the sign up button
         And A user enters the nickname
         And A user enters the new email
@@ -101,7 +101,7 @@ Feature: Login Settings
         And A user clicks on the login button
         Then valid error message of empty field
 
-    Scenario: Error validation of empty confirm password field in the signup of the settings page
+    Scenario: Error validation of empty confirm password field in the signup of the settings page with Iphone 8
         When A user clicks on the sign up button
         And A user enters the nickname
         And A user enters the new email
