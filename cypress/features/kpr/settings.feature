@@ -1,5 +1,4 @@
 @feature("Settings")
-@story("Settings")
 Feature: Settings
 
     Background:
@@ -10,7 +9,7 @@ Feature: Settings
         And A user clicks on the login button
         And A user clicks on the close button of the modal
 
-    Scenario Outline: Validate Settings page
+    Scenario Outline: Validate Settings page in KPR
         Then validate that the "<Text>" is displayed
 
         Examples:
@@ -29,7 +28,7 @@ Feature: Settings
             | CONNECT A NEW WALLET |
             | No Wallet Connected  |
 
-    Scenario Outline: Validate Settings page anchors at the left
+    Scenario Outline: Validate Settings page anchors at the left in KPR
         Then validate that the "<Anchors>" is displayed
 
         Examples:

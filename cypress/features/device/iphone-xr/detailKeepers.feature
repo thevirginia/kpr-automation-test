@@ -1,5 +1,4 @@
 @feature("Detail_Keepers")
-@story("Detail_Keepers")
 Feature: Detail Keepers
 
     Background:
@@ -11,8 +10,7 @@ Feature: Detail Keepers
         And A user clicks on the login button
         And A user clicks on the close button of the modal
 
-
-    Scenario Outline: Validate DetailKeepers page - <Text>
+    Scenario Outline: Validate DetailKeepers page - <Text> with Iphone XR
         Then validate that the "<Text>" is displayed
 
         Examples:
@@ -26,8 +24,7 @@ Feature: Detail Keepers
             | GLOBAL POINTS COLLECTED   |
             | 234,509                   |
 
-
-    Scenario Outline: Validate Dropdown from Nickname
+    Scenario Outline: Validate Dropdown from Nickname with Iphone XR
         When select Nickname dropdown
         Then validate that the "<Text>" is displayed
 

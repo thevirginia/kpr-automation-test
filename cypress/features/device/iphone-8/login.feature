@@ -1,5 +1,4 @@
 @feature("Login")
-@story("Login")
 Feature: Login
 
     Feature Login page will work depending on the user credentials
@@ -12,49 +11,48 @@ Feature: Login
         And A user clicks on the login to kprverse button
 
      @severity("critical")
-     Scenario: Success Login
+     Scenario: Successful login with Iphone 8
          When A user enters the email "test2024@gmail.com"
          And A user enters the password "test2024.."
          And A user clicks on the login button
          Then valid if the user has been able to login
 
-     Scenario: Incorrect email Login
+     Scenario: Incorrect email on login with Iphone 8
          When A user enters the email "test2026@gmail.com"
          And A user enters the password "test2024.."
          And A user clicks on the login button
          Then The error message is displayed
 
-    Scenario: empty email field
+    Scenario: Validating empty email field error in Iphone 8
         And A user enters the password "test2024.."
         And A user clicks on the login button
         Then valid error message of empty field
 
-     Scenario: empty password field
+     Scenario:  Validation of empty password text field error in Iphone 8
          And A user enters the email "test2026@gmail.com"
          And A user clicks on the login button
          Then valid error message of empty field
 
-     Scenario: empty email and password fields
+     Scenario: Validating empty password and email field error with iphone 8
          And A user clicks on the login button
          Then valid error message of empty field
 
-     Scenario: Incorrect Password Login
+     Scenario: incorrect login password with Iphone 8
          When A user enters the email "test2024@gmail.com"
          And A user enters the password "test2026.."
          And A user clicks on the login button
          Then The error message is displayed
 
-     Scenario: background texts
-         Then valid "Email" background text is visible
-         And valid "Password" background text is visible
+     Scenario: Visibility of background texts in the Login/Signup area with Iphone 8
+         Then Valid that the background text "Email" is visible
+         And Valid that the background text "Password" is visible
          And A user clicks on the sign up button
-         And valid "Nickname" background text is visible
-         And valid "Email" background text is visible
-         And valid "Password" background text is visible
-         And valid "Confirm Password" background text is visible
+         And Valid that the background text "Nickname" is visible
+         And Valid that the background text "Email" is visible.
+         And Valid that the background text "Password" is visible
+         And Valid that the background text "Confirm" is visible
 
-
-    Scenario: Successful registration
+    Scenario: Successful registration with Iphone 8
         When A user clicks on the sign up button
         And A user enters the nickname
         And A user enters the new email
@@ -63,28 +61,25 @@ Feature: Login
         And A user clicks on the login button
         Then valid if the user has been able to register
 
-
-    Scenario: home page texts
+    Scenario: Visibility of the Home page texts with Iphone 8
         Then valid that the text "Welcome back Keeper" is visible
         And valid that the text "Forgot Password?" is visible
         And valid that the text "OR SIGN IN WITH SOCIALS" is visible
         And valid that the text "Dont have an account?" is visible
 
-
-    Scenario: valid the back button in the sign up modal
+    Scenario: validate the back button in the sign up modal with Iphone 8
         When A user clicks on the sign up button
         And A user clicks on the back button
         Then valid button on the home page
 
-
-    Scenario: forgot Password modal
+    Scenario: Validation of forgot password in the modal with Iphone 8
         When A user clicks on the forgot Password button
         Then valid that the text "Forgot your password" is visible
         And valid that the text "Verify your email address?" is visible
         And valid "Email Address" background text is visible
         And A user clicks on the Send Verification Code button
 
-    Scenario: empty nickname field in sign up
+    Scenario: Validation of empty nickname field error message with Iphone 8
         When A user clicks on the sign up button
         And A user enters the new email
         And A user enters the password "test2024.."
@@ -92,7 +87,7 @@ Feature: Login
         And A user clicks on the login button
         Then valid error message of empty field
 
-    Scenario: empty email field in sign up
+    Scenario: Validation of empty email field error message with Iphone 8
         When A user clicks on the sign up button
         And A user enters the nickname
         And A user enters the password "test2024.."
@@ -100,7 +95,7 @@ Feature: Login
         And A user clicks on the login button
         Then valid error message of empty field
 
-    Scenario: empty password field in sign up
+    Scenario: Validation of empty password field error message with Iphone 8
         When A user clicks on the sign up button
         And A user enters the nickname
         And A user enters the new email
@@ -108,7 +103,7 @@ Feature: Login
         And A user clicks on the login button
         Then valid error message of empty field
 
-    Scenario: empty confirm password field in sign up
+    Scenario: Error validation of empty confirm password field with Iphone 8
         When A user clicks on the sign up button
         And A user enters the nickname
         And A user enters the new email
