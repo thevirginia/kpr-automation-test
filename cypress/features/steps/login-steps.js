@@ -95,7 +95,7 @@ When('A user enters the password {string}', (password) => {
     loginPage.passwordField().type(password);
 });
 
-When('A user clicks on the signup button', () => {
+When('A user clicks on the login button', () => {
     loginPage.signInButton().click();
 });
 
@@ -161,7 +161,7 @@ Then('valid error message of empty field', () => {
     loginPage.emptyFieldMessage().should('be.visible');
 });
 
-Then('Valid that the background text {string} is visible', (text) => {
+Then('valid {string} background text is visible', (text) => {
     if (text === 'Email') {
         loginPage.emailField().invoke('attr', 'placeholder').should('contain', text);
     } else if (text === 'Password') {

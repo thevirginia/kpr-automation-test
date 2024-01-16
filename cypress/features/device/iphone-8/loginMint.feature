@@ -11,33 +11,33 @@ Feature: Login Mint
     Scenario: Successful login to Mint Page with Iphone 8
         When A user enters the email "test2024@gmail.com"
         And A user enters the password "test2024.."
-        And A user clicks on the signup button
+        And A user clicks on the login button
         Then valid if the user has been able to login
 
     Scenario: Incorrect email on Mint Page login with Iphone 8
         When A user enters the email "test2026@gmail.com"
         And A user enters the password "test2024.."
-        And A user clicks on the signup button
+        And A user clicks on the login button
         Then The error message is displayed
 
     Scenario: Validating empty email field error in Mint Page with Iphone 8
         And A user enters the password "test2024.."
-        And A user clicks on the signup button
+        And A user clicks on the login button
         Then valid error message of empty field
 
     Scenario: Validating empty password field error in Mint Page with Iphone 8
         And A user enters the email "test2026@gmail.com"
-        And A user clicks on the signup button
+        And A user clicks on the login button
         Then valid error message of empty field
 
     Scenario: Validating empty email and password field error in Mint Page with Iphone 8
-        And A user clicks on the signup button
+        And A user clicks on the login button
         Then valid error message of empty field
 
     Scenario: Incorrect Password Login in Mint page with Iphone 8
         When A user enters the email "test2024@gmail.com"
         And A user enters the password "test2026.."
-        And A user clicks on the signup button
+        And A user clicks on the login button
         Then The error message is displayed
 
     Scenario: Visibility of SIGN UP background texts in Mint Page with Iphone 8
@@ -55,7 +55,7 @@ Feature: Login Mint
         And A user enters the new email
         And A user enters the password "test2024.."
         And A user enter the confirm Password "test2024.."
-        And A user clicks on the signup button
+        And A user clicks on the login button
         Then valid if the user has been able to register
 
     Scenario: Visibility of home page texts in Mint Page with Iphone 8
@@ -81,7 +81,7 @@ Feature: Login Mint
         And A user enters the new email
         And A user enters the password "test2024.."
         And A user enter the confirm Password "test2024.."
-        And A user clicks on the signup button
+        And A user clicks on the login button
         Then valid error message of empty field
 
     Scenario: Validating empty email field error in Mint Page signup with Iphone 8
@@ -89,7 +89,7 @@ Feature: Login Mint
         And A user enters the nickname
         And A user enters the password "test2024.."
         And A user enter the confirm Password "test2024.."
-        And A user clicks on the signup button
+        And A user clicks on the login button
         Then valid error message of empty field
 
     Scenario: Validating empty password field error in Mint Page signup with Iphone 8
@@ -97,7 +97,7 @@ Feature: Login Mint
         And A user enters the nickname
         And A user enters the new email
         And A user enter the confirm Password "test2024.."
-        And A user clicks on the signup button
+        And A user clicks on the login button
         Then valid error message of empty field
 
     Scenario: Error validation of empty confirm password field in the signup of Mint Page with Iphone 8
@@ -105,5 +105,5 @@ Feature: Login Mint
         And A user enters the nickname
         And A user enters the new email
         And A user enters the password "test2024.."
-        And A user clicks on the signup button
+        And A user clicks on the login button
         Then The error message is displayed

@@ -9,47 +9,47 @@ Feature: Login
         And A user clicks on the submit button
         And A user clicks on the login to kprverse button
 
-     @severity("critical")
-Scenario: Successful Login in KPR
-         When A user enters the email "test2024@gmail.com"
-         And A user enters the password "test2024.."
-         And A user clicks on the login button
-         Then valid if the user has been able to login
+    @severity("critical")
+    Scenario: Successful Login in KPR
+        When A user enters the email "test2024@gmail.com"
+        And A user enters the password "test2024.."
+        And A user clicks on the login button
+        Then valid if the user has been able to login
 
-     Scenario: Incorrect email on Login in KPR
-         When A user enters the email "test2026@gmail.com"
-         And A user enters the password "test2024.."
-         And A user clicks on the login button
-         Then The error message is displayed
+    Scenario: Incorrect email on Login in KPR
+        When A user enters the email "test2026@gmail.com"
+        And A user enters the password "test2024.."
+        And A user clicks on the login button
+        Then The error message is displayed
 
     Scenario: Validating empty email field error in macbook-15
         And A user enters the password "test2024.."
         And A user clicks on the login button
         Then valid error message of empty field
 
-     Scenario: Validation of empty password text field error in macbook-15
-         And A user enters the email "test2026@gmail.com"
-         And A user clicks on the login button
-         Then valid error message of empty field
+    Scenario: Validation of empty password text field error in macbook-15
+        And A user enters the email "test2026@gmail.com"
+        And A user clicks on the login button
+        Then valid error message of empty field
 
-     Scenario: Validating empty password and email field error in KPR
-         And A user clicks on the login button
-         Then valid error message of empty field
+    Scenario: Validating empty password and email field error in KPR
+        And A user clicks on the login button
+        Then valid error message of empty field
 
-     Scenario: incorrect login password in KPR
-         When A user enters the email "test2024@gmail.com"
-         And A user enters the password "test2026.."
-         And A user clicks on the login button
-         Then The error message is displayed
+    Scenario: incorrect login password in KPR
+        When A user enters the email "test2024@gmail.com"
+        And A user enters the password "test2026.."
+        And A user clicks on the login button
+        Then The error message is displayed
 
-     Scenario: Visibility of background texts in the Login/Signup area in KPR
-         Then valid "Email" background text is visible
-         And valid "Password" background text is visible
-         And A user clicks on the sign up button
-         And valid "Nickname" background text is visible
-         And valid "Email" background text is visible
-         And valid "Password" background text is visible
-         And valid "Confirm Password" background text is visible
+    Scenario: Visibility of background texts in the Login/Signup area in KPR
+        Then valid "Email" background text is visible
+        And valid "Password" background text is visible
+        And A user clicks on the sign up button
+        And valid "Nickname" background text is visible
+        And valid "Email" background text is visible
+        And valid "Password" background text is visible
+        And valid "Confirm Password" background text is visible
 
     Scenario: Successful registration in KPR
         When A user clicks on the sign up button
