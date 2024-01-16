@@ -67,7 +67,7 @@ Given('the user Sign into the settings page in {string}', (env) => {
 
 Given('A user clicks the Sign in button in the home page', () => {
     loginPage.signInHomeBtn().should('be.visible').click({ force: true });
-    cy.wait(500)
+    cy.wait(800)
     loginPage.signInHomeBtn().should('be.enabled').click({ force: true });
 });
 
